@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9025501A66003080F8 /* AppDelegate.swift */; };
+		F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9225501A66003080F8 /* SceneDelegate.swift */; };
+		F7750F9525501A66003080F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9425501A66003080F8 /* ViewController.swift */; };
+		F7750F9825501A66003080F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9625501A66003080F8 /* Main.storyboard */; };
+		F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9925501A67003080F8 /* Assets.xcassets */; };
+		F7750F9D25501A67003080F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */; };
+		F7750FA825501A67003080F8 /* MarsMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FA725501A67003080F8 /* MarsMissionTests.swift */; };
+		F7750FB325501A67003080F8 /* MarsMissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FB225501A67003080F8 /* MarsMissionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7750FA425501A67003080F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7750F8525501A66003080F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7750F8C25501A66003080F8;
+			remoteInfo = MarsMission;
+		};
+		F7750FAF25501A67003080F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7750F8525501A66003080F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7750F8C25501A66003080F8;
+			remoteInfo = MarsMission;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7750F8D25501A66003080F8 /* MarsMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7750F9025501A66003080F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7750F9225501A66003080F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F7750F9425501A66003080F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7750F9725501A66003080F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7750F9925501A67003080F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7750F9C25501A67003080F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7750F9E25501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7750FA325501A67003080F8 /* MarsMissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7750FA725501A67003080F8 /* MarsMissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionTests.swift; sourceTree = "<group>"; };
+		F7750FA925501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7750FB225501A67003080F8 /* MarsMissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionUITests.swift; sourceTree = "<group>"; };
+		F7750FB425501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7750F8A25501A66003080F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750FA025501A67003080F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750FAB25501A67003080F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7750F8425501A66003080F8 = {
+			isa = PBXGroup;
+			children = (
+				F7750F8F25501A66003080F8 /* MarsMission */,
+				F7750FA625501A67003080F8 /* MarsMissionTests */,
+				F7750FB125501A67003080F8 /* MarsMissionUITests */,
+				F7750F8E25501A66003080F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7750F8E25501A66003080F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7750F8D25501A66003080F8 /* MarsMission.app */,
+				F7750FA325501A67003080F8 /* MarsMissionTests.xctest */,
+				F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7750F8F25501A66003080F8 /* MarsMission */ = {
+			isa = PBXGroup;
+			children = (
+				F7750F9025501A66003080F8 /* AppDelegate.swift */,
+				F7750F9225501A66003080F8 /* SceneDelegate.swift */,
+				F7750F9425501A66003080F8 /* ViewController.swift */,
+				F7750F9625501A66003080F8 /* Main.storyboard */,
+				F7750F9925501A67003080F8 /* Assets.xcassets */,
+				F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */,
+				F7750F9E25501A67003080F8 /* Info.plist */,
+			);
+			path = MarsMission;
+			sourceTree = "<group>";
+		};
+		F7750FA625501A67003080F8 /* MarsMissionTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7750FA725501A67003080F8 /* MarsMissionTests.swift */,
+				F7750FA925501A67003080F8 /* Info.plist */,
+			);
+			path = MarsMissionTests;
+			sourceTree = "<group>";
+		};
+		F7750FB125501A67003080F8 /* MarsMissionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7750FB225501A67003080F8 /* MarsMissionUITests.swift */,
+				F7750FB425501A67003080F8 /* Info.plist */,
+			);
+			path = MarsMissionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7750F8C25501A66003080F8 /* MarsMission */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7750FB725501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMission" */;
+			buildPhases = (
+				F7750F8925501A66003080F8 /* Sources */,
+				F7750F8A25501A66003080F8 /* Frameworks */,
+				F7750F8B25501A66003080F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarsMission;
+			productName = MarsMission;
+			productReference = F7750F8D25501A66003080F8 /* MarsMission.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7750FA225501A67003080F8 /* MarsMissionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7750FBA25501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMissionTests" */;
+			buildPhases = (
+				F7750F9F25501A67003080F8 /* Sources */,
+				F7750FA025501A67003080F8 /* Frameworks */,
+				F7750FA125501A67003080F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7750FA525501A67003080F8 /* PBXTargetDependency */,
+			);
+			name = MarsMissionTests;
+			productName = MarsMissionTests;
+			productReference = F7750FA325501A67003080F8 /* MarsMissionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7750FAD25501A67003080F8 /* MarsMissionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7750FBD25501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMissionUITests" */;
+			buildPhases = (
+				F7750FAA25501A67003080F8 /* Sources */,
+				F7750FAB25501A67003080F8 /* Frameworks */,
+				F7750FAC25501A67003080F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7750FB025501A67003080F8 /* PBXTargetDependency */,
+			);
+			name = MarsMissionUITests;
+			productName = MarsMissionUITests;
+			productReference = F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7750F8525501A66003080F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					F7750F8C25501A66003080F8 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					F7750FA225501A67003080F8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = F7750F8C25501A66003080F8;
+					};
+					F7750FAD25501A67003080F8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = F7750F8C25501A66003080F8;
+					};
+				};
+			};
+			buildConfigurationList = F7750F8825501A66003080F8 /* Build configuration list for PBXProject "MarsMission" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7750F8425501A66003080F8;
+			productRefGroup = F7750F8E25501A66003080F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7750F8C25501A66003080F8 /* MarsMission */,
+				F7750FA225501A67003080F8 /* MarsMissionTests */,
+				F7750FAD25501A67003080F8 /* MarsMissionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7750F8B25501A66003080F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7750F9D25501A67003080F8 /* LaunchScreen.storyboard in Resources */,
+				F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */,
+				F7750F9825501A66003080F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750FA125501A67003080F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750FAC25501A67003080F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7750F8925501A66003080F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7750F9525501A66003080F8 /* ViewController.swift in Sources */,
+				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
+				F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750F9F25501A67003080F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7750FA825501A67003080F8 /* MarsMissionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7750FAA25501A67003080F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7750FB325501A67003080F8 /* MarsMissionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7750FA525501A67003080F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7750F8C25501A66003080F8 /* MarsMission */;
+			targetProxy = F7750FA425501A67003080F8 /* PBXContainerItemProxy */;
+		};
+		F7750FB025501A67003080F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7750F8C25501A66003080F8 /* MarsMission */;
+			targetProxy = F7750FAF25501A67003080F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7750F9625501A66003080F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7750F9725501A66003080F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7750F9C25501A67003080F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7750FB525501A67003080F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7750FB625501A67003080F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7750FB825501A67003080F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMission/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMission;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7750FB925501A67003080F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMission/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMission;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7750FBB25501A67003080F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMissionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMissionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsMission.app/MarsMission";
+			};
+			name = Debug;
+		};
+		F7750FBC25501A67003080F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMissionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMissionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsMission.app/MarsMission";
+			};
+			name = Release;
+		};
+		F7750FBE25501A67003080F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMissionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMissionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarsMission;
+			};
+			name = Debug;
+		};
+		F7750FBF25501A67003080F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarsMissionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.MarsMissionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarsMission;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7750F8825501A66003080F8 /* Build configuration list for PBXProject "MarsMission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7750FB525501A67003080F8 /* Debug */,
+				F7750FB625501A67003080F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7750FB725501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7750FB825501A67003080F8 /* Debug */,
+				F7750FB925501A67003080F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7750FBA25501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMissionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7750FBB25501A67003080F8 /* Debug */,
+				F7750FBC25501A67003080F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7750FBD25501A67003080F8 /* Build configuration list for PBXNativeTarget "MarsMissionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7750FBE25501A67003080F8 /* Debug */,
+				F7750FBF25501A67003080F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7750F8525501A66003080F8 /* Project object */;
+}
