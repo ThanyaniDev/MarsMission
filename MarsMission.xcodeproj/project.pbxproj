@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F75C57CD25502A4E00F246C4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */; };
+		F75C57D225502A7A00F246C4 /* ReplaceMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C57D125502A7A00F246C4 /* ReplaceMeViewModel.swift */; };
 		F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9025501A66003080F8 /* AppDelegate.swift */; };
 		F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9225501A66003080F8 /* SceneDelegate.swift */; };
 		F7750F9525501A66003080F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9425501A66003080F8 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		F75C57D125502A7A00F246C4 /* ReplaceMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMeViewModel.swift; sourceTree = "<group>"; };
 		F7750F8D25501A66003080F8 /* MarsMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750F9025501A66003080F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7750F9225501A66003080F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F75C57C62550233100F246C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F75C57C72550233900F246C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F75C57CB2550247700F246C4 /* Storyboard */,
+				F7750F9925501A67003080F8 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F75C57C82550236300F246C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7750F9425501A66003080F8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F75C57C92550239900F246C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F75C57D125502A7A00F246C4 /* ReplaceMeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F75C57CA2550242F00F246C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7750F9025501A66003080F8 /* AppDelegate.swift */,
+				F7750F9225501A66003080F8 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F75C57CB2550247700F246C4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */,
+				F7750F9625501A66003080F8 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		F7750F8425501A66003080F8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +154,11 @@
 		F7750F8F25501A66003080F8 /* MarsMission */ = {
 			isa = PBXGroup;
 			children = (
-				F7750F9025501A66003080F8 /* AppDelegate.swift */,
-				F7750F9225501A66003080F8 /* SceneDelegate.swift */,
-				F7750F9425501A66003080F8 /* ViewController.swift */,
-				F7750F9625501A66003080F8 /* Main.storyboard */,
-				F7750F9925501A67003080F8 /* Assets.xcassets */,
-				F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */,
+				F75C57CA2550242F00F246C4 /* Resources */,
+				F75C57C92550239900F246C4 /* ViewModels */,
+				F75C57C82550236300F246C4 /* Controllers */,
+				F75C57C72550233900F246C4 /* Views */,
+				F75C57C62550233100F246C4 /* Models */,
 				F7750F9E25501A67003080F8 /* Info.plist */,
 			);
 			path = MarsMission;
@@ -258,8 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75C57CD25502A4E00F246C4 /* ReplaceMe.swift in Sources */,
 				F7750F9525501A66003080F8 /* ViewController.swift in Sources */,
 				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
+				F75C57D225502A7A00F246C4 /* ReplaceMeViewModel.swift in Sources */,
 				F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
