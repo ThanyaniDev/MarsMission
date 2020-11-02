@@ -1,2 +1,2 @@
 # MarsMission
-## it an application uses NASA Mars API to get the weather data fromt he NASA Weather Station
+#### It is an application that uses NASA Mars API to get the weather data from the NASA Weather Station
