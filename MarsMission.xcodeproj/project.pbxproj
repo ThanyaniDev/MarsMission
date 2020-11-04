@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F75C57CD25502A4E00F246C4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */; };
+		F748F8462551A0C5007ACC3B /* WeatherDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = F748F8452551A0C5007ACC3B /* WeatherDetails.xib */; };
+		F748F84C2551AE91007ACC3B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F84B2551AE91007ACC3B /* DetailsViewController.swift */; };
+		F748F8522551B9C1007ACC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8512551B9C1007ACC3B /* Constants.swift */; };
+		F748F85A25520E68007ACC3B /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F85925520E68007ACC3B /* LandingView.swift */; };
+		F748F85F255216A5007ACC3B /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = F748F85E255216A5007ACC3B /* testData.json */; };
+		F748F8652552187C007ACC3B /* AtmosphericTemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8642552187C007ACC3B /* AtmosphericTemperatureData.swift */; };
+		F748F86A25521CA9007ACC3B /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F86925521CA9007ACC3B /* getData.swift */; };
 		F75C57D225502A7A00F246C4 /* ReplaceMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C57D125502A7A00F246C4 /* ReplaceMeViewModel.swift */; };
 		F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9025501A66003080F8 /* AppDelegate.swift */; };
 		F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9225501A66003080F8 /* SceneDelegate.swift */; };
-		F7750F9525501A66003080F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9425501A66003080F8 /* ViewController.swift */; };
-		F7750F9825501A66003080F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9625501A66003080F8 /* Main.storyboard */; };
 		F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9925501A67003080F8 /* Assets.xcassets */; };
-		F7750F9D25501A67003080F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */; };
 		F7750FA825501A67003080F8 /* MarsMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FA725501A67003080F8 /* MarsMissionTests.swift */; };
 		F7750FB325501A67003080F8 /* MarsMissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FB225501A67003080F8 /* MarsMissionUITests.swift */; };
+		F775513C2550D3C7000D1ECB /* LandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F775513B2550D3C7000D1ECB /* LandingView.xib */; };
+		F77551602550E4DB000D1ECB /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F775515F2550E4DB000D1ECB /* LandingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,15 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		F748F8452551A0C5007ACC3B /* WeatherDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherDetails.xib; sourceTree = "<group>"; };
+		F748F84B2551AE91007ACC3B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F748F8512551B9C1007ACC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F748F85925520E68007ACC3B /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		F748F85E255216A5007ACC3B /* testData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
+		F748F8642552187C007ACC3B /* AtmosphericTemperatureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericTemperatureData.swift; sourceTree = "<group>"; };
+		F748F86925521CA9007ACC3B /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
 		F75C57D125502A7A00F246C4 /* ReplaceMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMeViewModel.swift; sourceTree = "<group>"; };
 		F7750F8D25501A66003080F8 /* MarsMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750F9025501A66003080F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7750F9225501A66003080F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7750F9425501A66003080F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F7750F9725501A66003080F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7750F9925501A67003080F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7750F9C25501A67003080F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7750F9E25501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7750FA325501A67003080F8 /* MarsMissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750FA725501A67003080F8 /* MarsMissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionTests.swift; sourceTree = "<group>"; };
@@ -53,6 +61,8 @@
 		F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750FB225501A67003080F8 /* MarsMissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionUITests.swift; sourceTree = "<group>"; };
 		F7750FB425501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F775513B2550D3C7000D1ECB /* LandingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingView.xib; sourceTree = "<group>"; };
+		F775515F2550E4DB000D1ECB /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F748F8502551B9A0007ACC3B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F748F85E255216A5007ACC3B /* testData.json */,
+				F748F8512551B9C1007ACC3B /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F75C57C62550233100F246C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F75C57CC25502A4E00F246C4 /* ReplaceMe.swift */,
+				F748F8642552187C007ACC3B /* AtmosphericTemperatureData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +110,7 @@
 		F75C57C72550233900F246C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F75C57CB2550247700F246C4 /* Storyboard */,
+				F77551402550D3D4000D1ECB /* NibFiles */,
 				F7750F9925501A67003080F8 /* Assets.xcassets */,
 			);
 			path = Views;
@@ -100,7 +119,9 @@
 		F75C57C82550236300F246C4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7750F9425501A66003080F8 /* ViewController.swift */,
+				F775515F2550E4DB000D1ECB /* LandingViewController.swift */,
+				F748F84B2551AE91007ACC3B /* DetailsViewController.swift */,
+				F748F85925520E68007ACC3B /* LandingView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,15 +141,6 @@
 				F7750F9225501A66003080F8 /* SceneDelegate.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F75C57CB2550247700F246C4 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */,
-				F7750F9625501A66003080F8 /* Main.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		F7750F8425501A66003080F8 = {
@@ -154,12 +166,14 @@
 		F7750F8F25501A66003080F8 /* MarsMission */ = {
 			isa = PBXGroup;
 			children = (
+				F748F8502551B9A0007ACC3B /* Helper */,
 				F75C57CA2550242F00F246C4 /* Resources */,
 				F75C57C92550239900F246C4 /* ViewModels */,
 				F75C57C82550236300F246C4 /* Controllers */,
 				F75C57C72550233900F246C4 /* Views */,
 				F75C57C62550233100F246C4 /* Models */,
 				F7750F9E25501A67003080F8 /* Info.plist */,
+				F748F86925521CA9007ACC3B /* getData.swift */,
 			);
 			path = MarsMission;
 			sourceTree = "<group>";
@@ -180,6 +194,15 @@
 				F7750FB425501A67003080F8 /* Info.plist */,
 			);
 			path = MarsMissionUITests;
+			sourceTree = "<group>";
+		};
+		F77551402550D3D4000D1ECB /* NibFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F775513B2550D3C7000D1ECB /* LandingView.xib */,
+				F748F8452551A0C5007ACC3B /* WeatherDetails.xib */,
+			);
+			path = NibFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,9 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7750F9D25501A67003080F8 /* LaunchScreen.storyboard in Resources */,
+				F775513C2550D3C7000D1ECB /* LandingView.xib in Resources */,
+				F748F8462551A0C5007ACC3B /* WeatherDetails.xib in Resources */,
+				F748F85F255216A5007ACC3B /* testData.json in Resources */,
 				F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */,
-				F7750F9825501A66003080F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75C57CD25502A4E00F246C4 /* ReplaceMe.swift in Sources */,
-				F7750F9525501A66003080F8 /* ViewController.swift in Sources */,
 				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
 				F75C57D225502A7A00F246C4 /* ReplaceMeViewModel.swift in Sources */,
+				F77551602550E4DB000D1ECB /* LandingViewController.swift in Sources */,
+				F748F85A25520E68007ACC3B /* LandingView.swift in Sources */,
+				F748F8522551B9C1007ACC3B /* Constants.swift in Sources */,
 				F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */,
+				F748F8652552187C007ACC3B /* AtmosphericTemperatureData.swift in Sources */,
+				F748F86A25521CA9007ACC3B /* getData.swift in Sources */,
+				F748F84C2551AE91007ACC3B /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,25 +378,6 @@
 			targetProxy = F7750FAF25501A67003080F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F7750F9625501A66003080F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7750F9725501A66003080F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F7750F9B25501A67003080F8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7750F9C25501A67003080F8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F7750FB525501A67003080F8 /* Debug */ = {
