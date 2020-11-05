@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="MarsMission" customModuleProvider="target">
             <connections>
                 <outlet property="dailyWeatherReport" destination="ugs-ad-FyN" id="8Xb-XM-xvR"/>
+                <outlet property="seasonalWeatherReport" destination="Jt0-Ie-mr6" id="Jk1-kN-PGD"/>
+                <outlet property="threeDayWeatherReport" destination="zBC-dN-4PN" id="Rub-c7-n1s"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wAO-iZ-gZN"/>
             </connections>
         </placeholder>
@@ -19,52 +21,57 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-ad-FyN">
+                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-ad-FyN">
                     <rect key="frame" x="20" y="398" width="374" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="374" id="7cA-K7-KHm"/>
-                        <constraint firstAttribute="height" constant="100" id="xNQ-3L-eFV"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
                     <state key="normal" title="Daily Weather Report">
                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="jGZ-7a-kbl"/>
+                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="HJh-Dy-By0"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARS WEATHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-li-nzP">
+                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-dN-4PN">
+                    <rect key="frame" x="20" y="539" width="374" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                    <state key="normal" title="3-Day Weather Report">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTap3DayWeatherReport:" destination="-1" eventType="touchUpInside" id="Lbr-IE-nCp"/>
+                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="Nw7-8Z-Pgb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARS WEATHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-li-nzP">
                     <rect key="frame" x="82" y="263" width="274" height="43"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="274" id="Bqi-Kt-TEI"/>
-                        <constraint firstAttribute="height" constant="43" id="CZf-Lp-eja"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
                     <color key="textColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt0-Ie-mr6">
+                    <rect key="frame" x="20" y="682" width="374" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                    <state key="normal" title="Seasonal Weather Report">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="cZ1-DV-EFZ"/>
+                        <action selector="didTapSeasonalWeatherReport:" destination="-1" eventType="touchUpInside" id="fha-Bp-xrB"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="4LO-uY-0tT"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="7H4-XX-4SO"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="top" secondItem="6iJ-li-nzP" secondAttribute="bottom" constant="92" id="8VF-n2-a6E"/>
-                <constraint firstItem="6iJ-li-nzP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="82" id="8n5-41-FTY"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BFd-2M-ZAT"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="top" secondItem="6iJ-li-nzP" secondAttribute="bottom" constant="92" id="EHz-Z2-ihH"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GST-Hv-bVK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6iJ-li-nzP" secondAttribute="trailing" constant="58" id="IgH-WN-dNz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ugs-ad-FyN" secondAttribute="bottom" constant="364" id="Sn8-OW-Z2p"/>
-                <constraint firstItem="6iJ-li-nzP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="82" id="Ssi-cW-jm7"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6iJ-li-nzP" secondAttribute="trailing" constant="58" id="ZCt-3b-17h"/>
-                <constraint firstItem="6iJ-li-nzP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="219" id="kps-Gs-G0M"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ugs-ad-FyN" secondAttribute="trailing" constant="20" id="lXr-Ig-U3P"/>
-                <constraint firstItem="6iJ-li-nzP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="219" id="uAl-mg-gG7"/>
-                <constraint firstItem="ugs-ad-FyN" firstAttribute="top" secondItem="6iJ-li-nzP" secondAttribute="bottom" constant="92" id="wtM-3o-5hb"/>
-            </constraints>
             <point key="canvasLocation" x="400.00000000000006" y="67.633928571428569"/>
         </view>
     </objects>

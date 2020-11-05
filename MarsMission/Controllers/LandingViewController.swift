@@ -8,34 +8,31 @@
 import UIKit
 
 class LandingViewController: UIViewController {
-
+    
     @IBOutlet weak var dailyWeatherReport: UIButton!
-
-    override func viewDidLoad() {
+	@IBOutlet weak var threeDayWeatherReport: UIButton!
+	@IBOutlet weak var seasonalWeatherReport: UIButton!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Mars Mission"
+        navigationItem.title = keys.navigationTitle.landingtitle
         dailyWeatherReport.layer.cornerRadius = 30
-        showData()
+		threeDayWeatherReport.layer.cornerRadius = 30
+		seasonalWeatherReport.layer.cornerRadius = 30
         
     }
+	
+	@IBAction func didTapDailyWeatherReport(_ sender: Any) {
+		navigationController?.pushViewController(WeatherDetailViewController(nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+	}
+	
+	@IBAction func didTap3DayWeatherReport(_ sender: Any) {
+		//navigationController?.pushViewController((nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+	}
+	@IBAction func didTapSeasonalWeatherReport(_ sender: Any) {
+		//navigationController?.pushViewController((nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+	}
 }
 
-
-
-
-extension  LandingViewController:  LandingView {
-    
-    
-    func showData() {
-        let data = GetData().atmosphericTemperatureData
-        print(data)
-    }
-    
-    @IBAction func didTapDailyWeatherReport(_ sender: Any) {
-        navigationController?.pushViewController(DetailsViewController(nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
-      
-    }
-    
-}
 
 

@@ -10,16 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="MarsMission" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="fnK-WA-78m" id="Wes-Dr-6P2"/>
+                <outlet property="view" destination="EJl-MX-alu" id="jhx-3s-ANE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="fnK-WA-78m">
+        <view contentMode="scaleToFill" id="EJl-MX-alu">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="0mC-nM-2Aa"/>
+            <viewLayoutGuide key="safeArea" id="XE9-ng-fuT"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="-1275.3623188405797" y="-57.589285714285708"/>
+            <point key="canvasLocation" x="-1689" y="47"/>
         </view>
     </objects>
     <resources>
