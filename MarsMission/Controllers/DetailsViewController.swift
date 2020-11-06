@@ -8,7 +8,6 @@
 import UIKit
 
 class DetailsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, WeatherView {
-	
 	private lazy  var viewModel =  WeatherDataViewModel(view: self)
 	
 	override func viewDidLoad() {
@@ -23,7 +22,7 @@ class DetailsViewController: UICollectionViewController, UICollectionViewDelegat
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 6
+		return 1
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -35,6 +34,7 @@ class DetailsViewController: UICollectionViewController, UICollectionViewDelegat
 		cell.layer.cornerRadius = 10
 		cell.backgroundColor = .blue
 		
+		
 		return cell
 	}
 	
@@ -43,7 +43,7 @@ class DetailsViewController: UICollectionViewController, UICollectionViewDelegat
 	}
 	
 	func populateWeatherData(_ lastUpdated: String) {
-	
+
 	}
 }
 

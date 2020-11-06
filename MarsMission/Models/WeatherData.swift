@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct WeatherData: Codable {
 	var forecasts: [forecastsData]
 	var lastUpdated: String

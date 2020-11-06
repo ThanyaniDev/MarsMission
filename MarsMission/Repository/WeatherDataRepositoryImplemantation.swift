@@ -8,7 +8,6 @@
 import Foundation
 
 class WeatherDataRepositoryImplemantation: WeatherDataRepository {
-	
 	func fetchWeatherData(completion: @escaping (Result<WeatherData, NetworkError>) -> Void) {
 		ServiceImplementation.shared.fetchWeatherData { (result) in
 			switch result {
