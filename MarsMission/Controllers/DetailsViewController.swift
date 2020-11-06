@@ -7,11 +7,10 @@
 
 import UIKit
 
-class DetailsViewController: UICollectionViewController {
+class DetailsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		navigationItem.title = keys.navigationTitle.detailsViewtitle
 		collectionView.register(SearchViewCell.self, forCellWithReuseIdentifier: keys.Identifier.cellID)
 	}
@@ -22,7 +21,6 @@ class DetailsViewController: UICollectionViewController {
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return 6
-		
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -36,16 +34,11 @@ class DetailsViewController: UICollectionViewController {
 		return cell
 	}
 	
-	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return .init(width: view.frame.width - 10, height: 200)
 	}
-	
 }
 
-extension DetailsViewController: UICollectionViewDelegateFlowLayout {
-	
-}
 
 
 

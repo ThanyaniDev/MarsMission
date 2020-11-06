@@ -35,9 +35,7 @@ class WeatherDataViewModel {
 	private func weatherfecthWeatherDataSuccess(_ weatherdata: WeatherData) {
 		DispatchQueue.main.async {
 			self.weatherdata = weatherdata
-			//			self.view.populateWeatherData("Low: \(weatherdata.avarageValue ?? 0)")
 			self.view.populateWeatherData("\(weatherdata.mn) NaN° F | C")
-			
 		}
 	}
 	

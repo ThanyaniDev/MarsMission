@@ -15,20 +15,10 @@ class LandingViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		navigationItem.title = keys.navigationTitle.landingtitle
 		dailyWeatherReport.layer.cornerRadius = 30
 		threeDayWeatherReport.layer.cornerRadius = 30
 		seasonalWeatherReport.layer.cornerRadius = 30
-		
-		ServiceImplementation.shared.getWeatherData() { result in
-			switch result {
-				case .success(let results):
-					print(results)
-				case .failure(let error):
-					print(error)
-			}
-		}
 	}
 	
 	@IBAction func didTapDailyWeatherReport(_ sender: Any) {
@@ -36,10 +26,11 @@ class LandingViewController: UIViewController {
 	}
 	
 	@IBAction func didTap3DayWeatherReport(_ sender: Any) {
-		//navigationController?.pushViewController((nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+		//navigationController?.pushViewController((nibName:, bundle: nil), animated: true)
 	}
+	
 	@IBAction func didTapSeasonalWeatherReport(_ sender: Any) {
-		//navigationController?.pushViewController((nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+		//navigationController?.pushViewController((nibName: , bundle: nil), animated: true)
 	}
 }
 

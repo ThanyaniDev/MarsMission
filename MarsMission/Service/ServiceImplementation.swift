@@ -12,11 +12,9 @@ class ServiceImplementation: Service {
 	static let shared = ServiceImplementation()
 	
 	func getWeatherData(completion: @escaping (Result<WeatherData, NetworkErrors>) -> Void) {
-		
 		guard let url = URL(string: keys.endpoint.Url) else { return }
 		
 		let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-			
 			if let _ = error {
 				completion(.failure(.dataError))
 				return

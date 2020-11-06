@@ -59,17 +59,15 @@ class SearchViewCell: UICollectionViewCell {
 		stackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 10, left: 20, bottom: 0, right: 20))
 		stackView.axis = .vertical
 		stackView.spacing = 10
-		
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
 }
+
 extension SearchViewCell: WeatherView {
 	func populateWeatherData(_ mn: String) {
 		self.lowLabel.text = mn
 	}
-	
 }

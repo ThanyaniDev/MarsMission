@@ -42,7 +42,6 @@ extension UIView {
 		}
 		
 		[anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach{ $0?.isActive = true }
-		
 		return anchoredConstraints
 	}
 	
@@ -115,16 +114,13 @@ struct AnchoredConstraints {
 
 
 extension UITextField {
-	
 	public convenience init(placeholder: String) {
 		self.init()
 		self.placeholder = placeholder
 	}
-	
 }
 
 open class AspectFitImageView: UIImageView {
-	
 	convenience public init(image: UIImage? = nil, cornerRadius: CGFloat = 0) {
 		self.init(image: image)
 		self.layer.cornerRadius = cornerRadius
