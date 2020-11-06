@@ -24,7 +24,7 @@ class WeatherDataViewModel {
 			self.repository.fetchWeatherData { (result) in
 				switch result {
 					case .success(let weatherdata):
-						self.handleThatWeatherDataSuccess(weatherdata)
+						self.handleThatWeatherDataSucceeds(weatherdata)
 					case .failure(let error):
 						self.handleThatWeatherDataFail(error)
 				}
@@ -32,7 +32,7 @@ class WeatherDataViewModel {
 		}
 	}
 	
-	private func handleThatWeatherDataSuccess(_ weatherdata: WeatherData) {
+	private func handleThatWeatherDataSucceeds(_ weatherdata: WeatherData) {
 		DispatchQueue.main.async {
 			self.weatherdata = weatherdata
 			self.view.populateWeatherData(weatherdata.lastUpdated)
