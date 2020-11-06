@@ -10,7 +10,7 @@
 		F748F84C2551AE91007ACC3B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F84B2551AE91007ACC3B /* DetailsViewController.swift */; };
 		F748F8522551B9C1007ACC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8512551B9C1007ACC3B /* Constants.swift */; };
 		F748F8652552187C007ACC3B /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8642552187C007ACC3B /* WeatherData.swift */; };
-		F748F8DD2552BF8D007ACC3B /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8DC2552BF8D007ACC3B /* NetworkErrors.swift */; };
+		F748F8DD2552BF8D007ACC3B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8DC2552BF8D007ACC3B /* NetworkError.swift */; };
 		F748F8E92552D48F007ACC3B /* WeatherDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8E82552D48F007ACC3B /* WeatherDataRepository.swift */; };
 		F748F8EE2552D4B8007ACC3B /* WeatherDataRepositoryImplemantation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8ED2552D4B8007ACC3B /* WeatherDataRepositoryImplemantation.swift */; };
 		F748F8F62552DBC4007ACC3B /* WeatherDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8F52552DBC4007ACC3B /* WeatherDataViewModel.swift */; };
@@ -50,7 +50,7 @@
 		F748F84B2551AE91007ACC3B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F748F8512551B9C1007ACC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F748F8642552187C007ACC3B /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
-		F748F8DC2552BF8D007ACC3B /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		F748F8DC2552BF8D007ACC3B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F748F8E82552D48F007ACC3B /* WeatherDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataRepository.swift; sourceTree = "<group>"; };
 		F748F8ED2552D4B8007ACC3B /* WeatherDataRepositoryImplemantation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataRepositoryImplemantation.swift; sourceTree = "<group>"; };
 		F748F8F52552DBC4007ACC3B /* WeatherDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataViewModel.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F748F8512551B9C1007ACC3B /* Constants.swift */,
-				F748F8DC2552BF8D007ACC3B /* NetworkErrors.swift */,
+				F748F8DC2552BF8D007ACC3B /* NetworkError.swift */,
 				F75C5D2E2553F52500356F69 /* UILayouts.swift */,
 			);
 			path = Helper;
@@ -372,7 +372,7 @@
 				F75C5D252553BAFE00356F69 /* SearchViewCell.swift in Sources */,
 				F748F8EE2552D4B8007ACC3B /* WeatherDataRepositoryImplemantation.swift in Sources */,
 				F748F8E92552D48F007ACC3B /* WeatherDataRepository.swift in Sources */,
-				F748F8DD2552BF8D007ACC3B /* NetworkErrors.swift in Sources */,
+				F748F8DD2552BF8D007ACC3B /* NetworkError.swift in Sources */,
 				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
 				F77551602550E4DB000D1ECB /* LandingViewController.swift in Sources */,
 				F748F8522551B9C1007ACC3B /* Constants.swift in Sources */,

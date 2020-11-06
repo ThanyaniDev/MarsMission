@@ -19,27 +19,27 @@ class WeatherDataViewModel {
 		self.view = view
 	}
 	
-	func gettingWeatherData() {
+	func fetchWeatherData() {
 		DispatchQueue.global(qos: .background).async {
-			self.repository.getWeatherData { (result) in
+			self.repository.fetchWeatherData { (result) in
 				switch result {
 					case .success(let weatherdata):
-						self.weatherfecthWeatherDataSuccess(weatherdata)
+						self.handleThatWeatherDataSuccess(weatherdata)
 					case .failure(let error):
-						self.weatherfecthWeatherDataFail(error)
+						self.handleThatWeatherDataFail(error)
 				}
 			}
 		}
 	}
 	
-	private func weatherfecthWeatherDataSuccess(_ weatherdata: WeatherData) {
+	private func handleThatWeatherDataSuccess(_ weatherdata: WeatherData) {
 		DispatchQueue.main.async {
 			self.weatherdata = weatherdata
-			self.view.populateWeatherData("\(weatherdata.mn) NaN° F | C")
+			self.view.populateWeatherData(weatherdata.lastUpdated)
 		}
 	}
 	
-	private func weatherfecthWeatherDataFail(_ error: Error) {
+	private func handleThatWeatherDataFail(_ error: Error) {
 		DispatchQueue.main.async {
 			print(error)
 		}

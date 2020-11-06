@@ -20,11 +20,9 @@ struct keys {
 		static let detailsViewtitle = "Daily Weather Report"
 	}
 	
-	
 	struct endpoint {
-		static let Url = "https://api.nasa.gov/insight_weather/?api_key=pn9u3Bxs3CjiCtIOlgcsZ0wt8bebWbEtHb5jhEwd&feedtype=json&ver=1.0"
+		static let Url = "https://run.mocky.io/v3/1fd068d7-cbb2-4ceb-b697-da7fcc1c520b"
 	}
-	
 	
 	struct Identifier {
 		static let cellID = "searchCellID"

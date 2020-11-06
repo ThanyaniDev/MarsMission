@@ -11,11 +11,19 @@ class SearchViewCell: UICollectionViewCell {
 	
 	private lazy  var viewModel =  WeatherDataViewModel(view: self)
 	
-	let solLabel: UILabel = {
+	let weatherStationLabel: UILabel = {
 		let label = UILabel()
-		label.text = "SOL : 689"
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize:40)
+		label.numberOfLines = 0
+		label.textColor = .white
+		return label
+	}()
+	
+	let lastUpdatedLabel: UILabel = {
+		let label = UILabel()
+		label.textAlignment = .center
+		label.font = .systemFont(ofSize: 20)
 		label.numberOfLines = 0
 		label.textColor = .white
 		return label
@@ -24,16 +32,14 @@ class SearchViewCell: UICollectionViewCell {
 	let dateLabel: UILabel = {
 		let label = UILabel()
 		label.textAlignment = .center
-		label.text = "NOV 05"
-		label.font = .systemFont(ofSize: 20)
+		label.font = .systemFont(ofSize: 25)
 		label.numberOfLines = 0
 		label.textColor = .white
 		return label
 	}()
 	
-	let hignLabel: UILabel = {
+	let tempLabel: UILabel = {
 		let label = UILabel()
-		label.text = "High : 67.32 F"
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 25)
 		label.numberOfLines = 0
@@ -41,20 +47,28 @@ class SearchViewCell: UICollectionViewCell {
 		return label
 	}()
 	
-	let lowLabel: UILabel = {
+	let windSpeedLabel: UILabel = {
 		let label = UILabel()
-		label.text = "Low : -43.32 F"
 		label.textAlignment = .center
 		label.font = .systemFont(ofSize: 25)
 		label.numberOfLines = 0
 		label.textColor = .white
 		return label
 	}()
+	
+//	let safeLabel: Bool = {
+//		let label = Bool()
+//		label.textAlignment = .center
+//		label.font = .systemFont(ofSize: 25)
+//		label.numberOfLines = 0
+//		label.textColor = .white
+//		return Bool
+//	}()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		viewModel.gettingWeatherData()
-		let stackView = UIStackView(arrangedSubviews: [solLabel,dateLabel,hignLabel,lowLabel])
+		viewModel.fetchWeatherData()
+		let stackView = UIStackView(arrangedSubviews: [weatherStationLabel,dateLabel,lastUpdatedLabel,tempLabel,windSpeedLabel])
 		addSubview(stackView)
 		stackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 10, left: 20, bottom: 0, right: 20))
 		stackView.axis = .vertical
@@ -67,7 +81,10 @@ class SearchViewCell: UICollectionViewCell {
 }
 
 extension SearchViewCell: WeatherView {
-	func populateWeatherData(_ mn: String) {
-		self.lowLabel.text = mn
+//	func populateWeatherData(_ lastUpdated: String,_ weatherStation: String, _ date: String,_ temp: Double,_ humidity: Int,_ windSpeed: Int,_ safe: Bool) {
+//		self.lastUpdatedLabel.text = lastUpdated
+//	}
+	func populateWeatherData(_ lastUpdated: String) {
+		self.lastUpdatedLabel.text = lastUpdated
 	}
 }

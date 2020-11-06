@@ -11,29 +11,21 @@ class ServiceImplementation: Service {
 	
 	static let shared = ServiceImplementation()
 	
-	func getWeatherData(completion: @escaping (Result<WeatherData, NetworkErrors>) -> Void) {
+	func fetchWeatherData(completion: @escaping (Result<WeatherData, NetworkError>) -> Void) {
 		guard let url = URL(string: keys.endpoint.Url) else { return }
-		
 		let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
 			if let _ = error {
 				completion(.failure(.dataError))
 				return
 			}
-			
 			guard let response = response as? HTTPURLResponse,  response.statusCode == 200 else {
 				completion(.failure(.responseError))
 				return
 			}
-			
-			if let datas = data {
-				print(datas)
-			}
-			
 			guard let data = data else {
 				completion(.failure(.dataError))
 				return
 			}
-			
 			do {
 				let decoder =  JSONDecoder()
 				decoder.keyDecodingStrategy = .convertFromSnakeCase

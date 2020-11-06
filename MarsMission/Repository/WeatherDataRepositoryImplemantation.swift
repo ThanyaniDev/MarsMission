@@ -9,10 +9,8 @@ import Foundation
 
 class WeatherDataRepositoryImplemantation: WeatherDataRepository {
 	
-	private let service = ServiceImplementation()
-	
-	func getWeatherData(completion: @escaping (Result<WeatherData, NetworkErrors>) -> Void) {
-		service.getWeatherData { (result) in
+	func fetchWeatherData(completion: @escaping (Result<WeatherData, NetworkError>) -> Void) {
+		ServiceImplementation.shared.fetchWeatherData { (result) in
 			switch result {
 				case .success(let weather):
 					completion(.success(weather))
