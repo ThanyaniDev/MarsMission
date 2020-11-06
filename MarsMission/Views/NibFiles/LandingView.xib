@@ -45,7 +45,6 @@
                     </state>
                     <connections>
                         <action selector="didTap3DayWeatherReport:" destination="-1" eventType="touchUpInside" id="Lbr-IE-nCp"/>
-                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="Nw7-8Z-Pgb"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARS WEATHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-li-nzP">
@@ -65,7 +64,6 @@
                         <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="cZ1-DV-EFZ"/>
                         <action selector="didTapSeasonalWeatherReport:" destination="-1" eventType="touchUpInside" id="fha-Bp-xrB"/>
                     </connections>
                 </button>

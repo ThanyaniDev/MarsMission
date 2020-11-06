@@ -8,22 +8,31 @@
 import UIKit
 
 class LandingViewController: UIViewController {
-    
-    @IBOutlet weak var dailyWeatherReport: UIButton!
+	
+	@IBOutlet weak var dailyWeatherReport: UIButton!
 	@IBOutlet weak var threeDayWeatherReport: UIButton!
 	@IBOutlet weak var seasonalWeatherReport: UIButton!
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = keys.navigationTitle.landingtitle
-        dailyWeatherReport.layer.cornerRadius = 30
+		super.viewDidLoad()
+		
+		navigationItem.title = keys.navigationTitle.landingtitle
+		dailyWeatherReport.layer.cornerRadius = 30
 		threeDayWeatherReport.layer.cornerRadius = 30
 		seasonalWeatherReport.layer.cornerRadius = 30
-        
-    }
+		
+		ServiceImplementation.shared.getWeatherData() { result in
+			switch result {
+				case .success(let results):
+					print(results)
+				case .failure(let error):
+					print(error)
+			}
+		}
+	}
 	
 	@IBAction func didTapDailyWeatherReport(_ sender: Any) {
-		navigationController?.pushViewController(WeatherDetailViewController(nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
+		navigationController?.pushViewController(DetailsViewController(nibName: keys.nibName.weatherDetails, bundle: nil), animated: true)
 	}
 	
 	@IBAction func didTap3DayWeatherReport(_ sender: Any) {

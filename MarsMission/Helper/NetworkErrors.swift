@@ -8,10 +8,10 @@
 import Foundation
 
 enum NetworkErrors: String, Error {
-    
-    case dataError = "data Error"
-    case responseError = "response error"
-    case jsonfailedError = "json failed"
-    case clientError = ".clientError"
-
+	
+	case dataError = "data Error"
+	case responseError = "response error"
+	case jsonfailedError = "json failed"
+	case clientError = ".clientError"
+	
 }

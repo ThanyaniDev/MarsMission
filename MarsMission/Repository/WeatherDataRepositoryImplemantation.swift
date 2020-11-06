@@ -8,20 +8,17 @@
 import Foundation
 
 class WeatherDataRepositoryImplemantation: WeatherDataRepository {
-   
-    private let service = WeatherDataRepositoryImplemantation()
-    
-    func getData(completion: @escaping (Result<WeatherData, NetworkErrors>) -> Void) {
-        service.getData { (result) in
-            
-            switch result {
-            case .success(let weatherdata):
-                completion(.success(weatherdata))
-            case .failure(let error):
-                completion(.failure(error))
-                print(error)
-            }
-            
-        }
-    }
+	
+	private let service = ServiceImplementation()
+	
+	func getWeatherData(completion: @escaping (Result<WeatherData, NetworkErrors>) -> Void) {
+		service.getWeatherData { (result) in
+			switch result {
+				case .success(let weather):
+					completion(.success(weather))
+				case .failure( _):
+					completion(.failure(.responseError))
+			}
+		}
+	}
 }

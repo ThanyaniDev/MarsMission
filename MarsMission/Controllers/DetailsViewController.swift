@@ -7,38 +7,45 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-	
-	private var collectionView: UICollectionView?
+class DetailsViewController: UICollectionViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		navigationItem.title = keys.navigationTitle.detailsViewtitle
-		
-		collectionView?.backgroundColor = UIColor.systemRed
-		let layout = UICollectionViewLayout()
-		
-		collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-		
-		guard let collectionView = collectionView else {
-			return  }
-		
-		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-		collectionView.delegate = self
-		collectionView.dataSource = self
-		view.addSubview(collectionView)
-		collectionView.frame = view.bounds
+		collectionView.register(SearchViewCell.self, forCellWithReuseIdentifier: keys.Identifier.cellID)
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-		cell.contentView.backgroundColor = .systemPink
+	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return 6
+		
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return UIEdgeInsets(top: 10.0, left: 1.0, bottom: 10, right: 1.0)
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: keys.Identifier.cellID, for: indexPath) as! SearchViewCell
+		cell.layer.cornerRadius = 10
+		cell.backgroundColor = .blue
 		return cell
 	}
+	
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return .init(width: view.frame.width - 10, height: 200)
+	}
+	
 }
+
+extension DetailsViewController: UICollectionViewDelegateFlowLayout {
+	
+}
+
+
 
