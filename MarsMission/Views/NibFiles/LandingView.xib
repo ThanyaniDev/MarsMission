@@ -10,9 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="MarsMission" customModuleProvider="target">
             <connections>
-                <outlet property="dailyWeatherReport" destination="ugs-ad-FyN" id="8Xb-XM-xvR"/>
-                <outlet property="seasonalWeatherReport" destination="Jt0-Ie-mr6" id="Jk1-kN-PGD"/>
-                <outlet property="threeDayWeatherReport" destination="zBC-dN-4PN" id="Rub-c7-n1s"/>
+                <outlet property="collectionView" destination="Jp2-o3-BSp" id="gzi-bJ-xTO"/>
+                <outlet property="lastUpdatedLabel" destination="3CF-8c-fp6" id="yRx-HI-p1C"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wAO-iZ-gZN"/>
             </connections>
         </placeholder>
@@ -21,59 +20,43 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugs-ad-FyN">
-                    <rect key="frame" x="20" y="398" width="374" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                    <state key="normal" title="Daily Weather Report">
-                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="didTapDailyWeatherReport:" destination="-1" eventType="touchUpInside" id="HJh-Dy-By0"/>
-                    </connections>
-                </button>
-                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-dN-4PN">
-                    <rect key="frame" x="20" y="539" width="374" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                    <state key="normal" title="3-Day Weather Report">
-                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="didTap3DayWeatherReport:" destination="-1" eventType="touchUpInside" id="Lbr-IE-nCp"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MARS WEATHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-li-nzP">
-                    <rect key="frame" x="82" y="263" width="274" height="43"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
-                    <color key="textColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-o3-BSp">
+                    <rect key="frame" x="20" y="198" width="374" height="501"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rd2-oV-zRA">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CF-8c-fp6">
+                    <rect key="frame" x="20" y="769" width="374" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt0-Ie-mr6">
-                    <rect key="frame" x="20" y="682" width="374" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                    <state key="normal" title="Seasonal Weather Report">
-                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="titleShadowColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="didTapSeasonalWeatherReport:" destination="-1" eventType="touchUpInside" id="fha-Bp-xrB"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-            <point key="canvasLocation" x="400.00000000000006" y="67.633928571428569"/>
+            <constraints>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2Vl-KQ-qsC"/>
+                <constraint firstItem="3CF-8c-fp6" firstAttribute="top" secondItem="Jp2-o3-BSp" secondAttribute="bottom" constant="71" id="5Xi-K7-tWi"/>
+                <constraint firstItem="3CF-8c-fp6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7ou-6B-rpT"/>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="BeR-f0-eMy"/>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="154" id="Vtz-vk-9o3"/>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="trailing" secondItem="3CF-8c-fp6" secondAttribute="trailing" id="aye-K8-2F2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3CF-8c-fp6" secondAttribute="bottom" constant="47" id="kff-ls-JdS"/>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="mUR-Dl-AVK"/>
+                <constraint firstItem="Jp2-o3-BSp" firstAttribute="leading" secondItem="3CF-8c-fp6" secondAttribute="leading" id="wvg-wE-B25"/>
+            </constraints>
+            <point key="canvasLocation" x="-581" y="84"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

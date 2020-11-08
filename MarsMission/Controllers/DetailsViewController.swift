@@ -7,13 +7,11 @@
 
 import UIKit
 
-class DetailsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, WeatherView {
-	private lazy  var viewModel =  WeatherDataViewModel(view: self)
+class DetailsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		viewModel.fetchWeatherData()
-		navigationItem.title = keys.navigationTitle.detailsViewtitle
+		navigationItem.title = keys.navigationTitle.detailsViewTitle
 		collectionView.register(SearchViewCell.self, forCellWithReuseIdentifier: keys.Identifier.cellID)
 	}
 	
@@ -33,17 +31,11 @@ class DetailsViewController: UICollectionViewController, UICollectionViewDelegat
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: keys.Identifier.cellID, for: indexPath) as! SearchViewCell
 		cell.layer.cornerRadius = 10
 		cell.backgroundColor = .blue
-		
-		
 		return cell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return .init(width: view.frame.width - 10, height: 200)
-	}
-	
-	func populateWeatherData(_ lastUpdated: String) {
-
 	}
 }
 

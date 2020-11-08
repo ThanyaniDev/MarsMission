@@ -8,5 +8,5 @@
 import Foundation
 
 protocol Service {
-	func fetchWeatherData(completion:  @escaping (Result<WeatherData, NetworkError>) -> Void )
+	func fetchWeatherData(completion:  @escaping (Result<WeatherData, NetworkError>) -> Void)
 }
