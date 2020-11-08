@@ -9,10 +9,9 @@ import UIKit
 
 class LandingViewController: UIViewController {
 	private lazy  var viewModel =  WeatherDataViewModel(view: self)
-	
-	var forecastWeatherData = [WeatherData]()
-	
+		
 	@IBOutlet weak var lastUpdatedLabel: UILabel!
+	@IBOutlet weak var weatherStationLabel: UILabel!
 	@IBOutlet weak var collectionView: UICollectionView!
 	
 	override func viewDidLoad() {
@@ -35,8 +34,8 @@ extension LandingViewController: WeatherView {
 	}
 	
 	func populateWeatherData(_ lastUpdated: String, _ weatherStation: String) {
-		self.lastUpdatedLabel.text = "Weather Station: \(weatherStation)"
-		
+		self.lastUpdatedLabel.text = "Last Updated: \(convertUTCDateToLocalDate(date: lastUpdated))"
+		self.weatherStationLabel.text = "Weather Station: \(weatherStation)"
 	}
 }
 
@@ -44,28 +43,27 @@ extension LandingViewController: UICollectionViewDataSource, UICollectionViewDel
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return forecastWeatherData.count
+		return viewModel.forecastsData.count
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: keys.Identifier.cellID, for: indexPath) as! weatherForecastViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"cell", for: indexPath) as! weatherForecastViewCell
 		cell.layer.cornerRadius = 10
 		cell.backgroundColor = .blue
-		cell.temp?.text = String(forecastWeatherData[indexPath.row].forecasts[indexPath.row].temp!)
+		cell.temp.text = viewModel.forecastsData[indexPath.row].date
 		return cell
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 		let insets:CGFloat = 10
 		return UIEdgeInsets(top: insets, left: insets, bottom: insets, right: insets)
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: 80, height: 80)
 	}
-	
 }
 
 

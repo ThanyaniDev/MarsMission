@@ -7,15 +7,12 @@
 
 import Foundation
 
-extension String {
-	func fromUTCToDateMonthString() -> String {
-		var convertedUTC = ""
-		let formatter = DateFormatter()
-		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-		let currentDate = formatter.date(from: self)
-		formatter.locale = Locale(identifier: "bg_BG")
-		formatter.dateFormat = "d MMM"
-		convertedUTC = formatter.string(from: currentDate!)
-		return convertedUTC
-	}
+func convertUTCDateToLocalDate(date:String) -> String {
+	let format = DateFormatter()
+	format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+	let convertedDate =  format.date(from: date)
+	format.timeZone =  TimeZone.current
+	format.dateFormat = "MMM d, h:mm a"
+	let localDateString =  format.string(from: convertedDate!)
+	return localDateString
 }

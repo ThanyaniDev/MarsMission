@@ -12,6 +12,7 @@ class WeatherDataViewModel {
 	let repository = WeatherDataRepositoryImplemantation()
 	
 	var weatherData: WeatherData?
+	var forecastsData = [forecast]()
 	var view: WeatherView
 	
 	init(view: WeatherView) {
