@@ -12,7 +12,6 @@ class WeatherDataViewModel {
 	let repository = WeatherDataRepositoryImplemantation()
 	
 	var weatherData: WeatherData?
-	var forecastsData = [forecast]()
 	var view: WeatherView
 	
 	init(view: WeatherView) {
@@ -25,6 +24,7 @@ class WeatherDataViewModel {
 				switch result {
 					case .success(let weatherData):
 						self.handleThatWeatherDataSucceeds(weatherData)
+						print(weatherData)
 					case .failure(let error):
 						self.handleThatWeatherDataFail(error)
 				}
@@ -36,7 +36,10 @@ class WeatherDataViewModel {
 		DispatchQueue.main.async { [self] in
 			self.weatherData = weatherData
 			self.view.populateWeatherData(weatherData.lastUpdated!,
-										  weatherData.weatherStation!)
+										  weatherData.weatherStation!,
+										  weatherData.forecasts[0].date!,
+										  weatherData.forecasts[1].temp!)
+			
 		}
 	}
 	

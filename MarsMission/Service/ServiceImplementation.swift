@@ -23,7 +23,6 @@ class ServiceImplementation: Service {
 				if let data = data {
 					let weatherForecast =  try JSONDecoder().decode(WeatherData.self, from: data)
 					completion(.success(weatherForecast))
-					print(weatherForecast)
 				} else {
 					completion(.failure(.jsonfailedError))
 				}

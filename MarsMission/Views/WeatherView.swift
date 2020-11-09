@@ -8,7 +8,6 @@
 import Foundation
 
 protocol WeatherView {
-	func populateWeatherData(_ lastUpdated: String,_ weatherStation: String)
+	func populateWeatherData(_ lastUpdated: String,_ weatherStation: String,_ date: String,_ temp: Double)
 	func configureUI()
-	//func setUpCollectionView()
 }

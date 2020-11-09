@@ -9,31 +9,30 @@ import UIKit
 
 class LandingViewController: UIViewController {
 	private lazy  var viewModel =  WeatherDataViewModel(view: self)
-		
+	
 	@IBOutlet weak var lastUpdatedLabel: UILabel!
 	@IBOutlet weak var weatherStationLabel: UILabel!
 	@IBOutlet weak var collectionView: UICollectionView!
+
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel.fetchWeatherData()
 		configureUI()
-		setUpCollectionView()
 		navigationItem.title = keys.navigationTitle.landingTitle
 	}
 }
 
 extension LandingViewController: WeatherView {
-	func setUpCollectionView() {
-		let nib = UINib(nibName: "weatherForecastViewCell", bundle: nil)
-		self.collectionView.register(nib, forCellWithReuseIdentifier: "cell")
-	}
-	
 	func configureUI() {
-		collectionView.layer.cornerRadius = 60
+		collectionView.layer.cornerRadius = 40
+		
+		self.collectionView.register(weatherForecastViewCell.self, forCellWithReuseIdentifier: keys.Identifier.weatherForecastCellId)
+		self.collectionView.delegate = self
+		self.collectionView.dataSource = self
 	}
 	
-	func populateWeatherData(_ lastUpdated: String, _ weatherStation: String) {
+	func populateWeatherData(_ lastUpdated: String, _ weatherStation: String,_ date: String,_ temp: Double) {
 		self.lastUpdatedLabel.text = "Last Updated: \(convertUTCDateToLocalDate(date: lastUpdated))"
 		self.weatherStationLabel.text = "Weather Station: \(weatherStation)"
 	}
@@ -45,14 +44,15 @@ extension LandingViewController: UICollectionViewDataSource, UICollectionViewDel
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.forecastsData.count
+		return 6
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"cell", for: indexPath) as! weatherForecastViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: keys.Identifier.weatherForecastCellId, for: indexPath) as! weatherForecastViewCell
 		cell.layer.cornerRadius = 10
-		cell.backgroundColor = .blue
-		cell.temp.text = viewModel.forecastsData[indexPath.row].date
+		cell.backgroundColor = .darkGray
+		cell.dateLabel.text = "weather"
+		cell.tempLabel.text = "200.0f"
 		return cell
 	}
 
@@ -62,7 +62,7 @@ extension LandingViewController: UICollectionViewDataSource, UICollectionViewDel
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 80, height: 80)
+		return CGSize(width: 150, height: 150)
 	}
 }
 

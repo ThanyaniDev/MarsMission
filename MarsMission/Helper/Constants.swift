@@ -13,6 +13,7 @@ struct keys {
 		static let landingView = "LandingView"
 		static let weatherDetails = "WeatherDetails"
 		static let WeatherDetailViewController = "WeatherDetailViewController"
+		static let weatherForecast = "weatherForecastViewCell"
 	}
 	
 	struct navigationTitle {
@@ -26,5 +27,6 @@ struct keys {
 	
 	struct Identifier {
 		static let cellID = "searchCellID"
+		static let weatherForecastCellId = "cell"
 	}
 }

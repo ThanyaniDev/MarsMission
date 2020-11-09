@@ -20,7 +20,3 @@ struct forecast: Codable {
 	var windSpeed: Int?
 	var safe: Bool?
 }
-
-
-
-
