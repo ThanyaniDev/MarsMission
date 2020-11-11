@@ -10,7 +10,7 @@ import Foundation
 
 struct Keys {
 	struct NibName {
-		static let ForecastCollectionViewController = "ForecastCollectionViewController"
+		static let ForecastCollectionViewController = "ForecastViewController"
 	}
 	struct NavigationTitle {
 		static let ForecastCollectionViewControllerTitle = "Mars Mission"

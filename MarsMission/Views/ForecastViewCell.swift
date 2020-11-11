@@ -27,12 +27,12 @@ class ForecastViewCell: UICollectionViewCell {
 		
 		forecastDateLabel = forecastLabel
 		
-		contentView.backgroundColor = .systemGray
+		contentView.backgroundColor = .systemGroupedBackground
 		contentView.layer.cornerRadius = 25
 		forecastDateLabel.textAlignment = .center
-		forecastLabel.font = .systemFont(ofSize: 30)
+		forecastLabel.font = .systemFont(ofSize: 25)
 		forecastLabel.numberOfLines = 2
-		forecastLabel.textColor = .white
+		forecastLabel.textColor = .init(red: 50/255, green: 80/255, blue: 106/255, alpha: 0.8)
 	}
 	
 	required init?(coder: NSCoder) {
