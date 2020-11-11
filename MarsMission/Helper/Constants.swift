@@ -16,6 +16,7 @@ struct Keys {
 	
 	struct NavigationTitle {
 		static let forecastCollectionViewControllerTitle = "Mars Mission"
+		static let forecastDetailViewControllerTitle = "Mars Mission"
 	}
 	
 	struct Endpoint {
