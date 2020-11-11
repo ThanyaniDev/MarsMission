@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 class ForecastViewModel {
-
+	
 	let forecastTitle = Keys.ForecastTitle.title
 	
 	let forecastRepository = ForecastServiceImplementation()
 	
 	var forecast: Forecast?
 	var view: ForecastView
-
+	
 	init(view: ForecastView) {
 		self.view = view
 	}
@@ -25,7 +25,7 @@ class ForecastViewModel {
 		self.view.forecastTitle(forecastTitle)
 		self.view.hideLoadingIndicator()
 	}
-
+	
 	func fetchForecast() {
 		self.view.showLoadingIndicator()
 		DispatchQueue.global(qos: .background).async {
@@ -49,7 +49,7 @@ class ForecastViewModel {
 			self?.view.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
 		}
 	}
-
+	
 	private func handleThatFecthForecastDataFail(_ error: Error) {
 		DispatchQueue.main.async {
 			print(error)
