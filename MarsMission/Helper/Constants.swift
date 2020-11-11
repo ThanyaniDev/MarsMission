@@ -10,15 +10,23 @@ import Foundation
 
 struct Keys {
 	struct NibName {
-		static let ForecastCollectionViewController = "ForecastViewController"
+		static let forecastViewController = "ForecastViewController"
+		static let forecastDetailViewController = "ForecastDetailViewController"
 	}
+	
 	struct NavigationTitle {
-		static let ForecastCollectionViewControllerTitle = "Mars Mission"
+		static let forecastCollectionViewControllerTitle = "Mars Mission"
 	}
+	
 	struct Endpoint {
-		static let Url = "https://run.mocky.io/v3/04dc1be1-8609-48c9-b4a0-27a363aa22a9"
+		static let url = "https://run.mocky.io/v3/04dc1be1-8609-48c9-b4a0-27a363aa22a9"
 	}
+	
 	struct Identifier {
-		static let ReuseIdentifier = "Cell"
+		static let reuseIdentifier = "Cell"
+	}
+	
+	struct ForecastTitle {
+		static let title = "Mars Weather Forecast"
 	}
 }

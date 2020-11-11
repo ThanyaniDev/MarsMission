@@ -9,8 +9,8 @@ import Foundation
 
 protocol ForecastView {
 	func reloadForecastCollectionView()
-	func showForecastView()
-	func hideForecastView()
+	func forecastTitle(_ title: String)
 	func showLoadingIndicator()
 	func hideLoadingIndicator()
+	func forecastFooter(_ weatherStation: String, _ lastUpdated: String)
 }
