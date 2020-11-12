@@ -18,10 +18,10 @@ class ForecastViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.title = Keys.NavigationTitle.forecastCollectionViewControllerTitle
+		navigationItem.title = .forecastCollectionViewControllerTitle
 		forecastCollectionView.delegate = self
 		forecastCollectionView.dataSource = self
-		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: Keys.Identifier.reuseIdentifier)
+		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: .reuseIdentifier)
 		forecastViewModel.forecastUIConfigration()
 		forecastViewModel.fetchForecast()
 	}
@@ -33,7 +33,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Keys.Identifier.reuseIdentifier, for: indexPath) as! ForecastViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .reuseIdentifier, for: indexPath) as! ForecastViewCell
 		guard let forecast =  forecastViewModel.forecast?.forecasts[indexPath.row] else {
 			return cell
 		}
@@ -43,7 +43,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let forecastDetail = forecastViewModel.forecast?.forecasts[indexPath.row]
-		let forecastdetailsViewController = ForecastDetailViewController(nibName: Keys.NibName.forecastDetailViewController, bundle: nil)
+		let forecastdetailsViewController = ForecastDetailViewController(nibName: .forecastDetailViewController, bundle: nil)
 		forecastdetailsViewController.title = ConvertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
 		forecastdetailsViewController.humidity = forecastDetail?.humidity ?? 0
 		forecastdetailsViewController.temp = forecastDetail?.temp ?? 0

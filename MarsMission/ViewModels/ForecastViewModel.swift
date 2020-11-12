@@ -10,7 +10,7 @@ import UIKit
 
 class ForecastViewModel {
 	
-	let forecastTitle = Keys.ForecastTitle.title
+	let forecastTitle = ForecastTitle.title
 	
 	let forecastRepository = ForecastServiceImplementation()
 	

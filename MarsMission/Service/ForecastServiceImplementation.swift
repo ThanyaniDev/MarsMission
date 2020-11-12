@@ -12,7 +12,7 @@ class ForecastServiceImplementation: ForecastService {
 	private let serviceError = NSError(domain: "", code: 1, userInfo: nil)
 	
 	func fetchForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
-		guard let url = URL(string: Keys.Endpoint.url) else {
+		guard let url = URL(string:.forecastUrl) else {
 			completion(Result.failure(serviceError))
 			return
 		}
