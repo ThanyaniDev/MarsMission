@@ -1,5 +1,5 @@
 //
-//  Service.swift
+//  ForecastService.swift
 //  MarsMission
 //
 //  Created by Thanyani on 2020/11/05.

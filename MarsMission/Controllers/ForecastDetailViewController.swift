@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  ForecastDetailViewController.swift
 //  MarsMission
 //
 //  Created by Thanyani on 2020/11/10.
@@ -24,11 +24,15 @@ class ForecastDetailViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setupForecastDetailView()
+	}
+	
+	func setupForecastDetailView() {
 		forecastDetailViewController.layer.cornerRadius = 25
-		forecastDetailHumidity.text = "Humidity: \(humidity)"
-		forecastDetailTempLabel.text = "Temp: \(temp)°C"
-		forecastDetailSafe.text = "Safe: \(safe)"
-		forecastDetailWindSpeed.text = "WindSpeed: \(windSpeed) Km/h"
-		forecastDetailDateLabel.text = date
+		self.forecastDetailDateLabel.text = date
+		self.forecastDetailHumidity.text = "Humidity: \(humidity)%"
+		self.forecastDetailTempLabel.text = "Temp: \(temp)°C"
+		self.forecastDetailSafe.text = "Safe: \(safe)"
+		self.forecastDetailWindSpeed.text = "WindSpeed: \(windSpeed) Km/h"
 	}
 }

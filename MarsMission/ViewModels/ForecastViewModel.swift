@@ -1,5 +1,5 @@
 //
-//  WeatherDataViewModel.swift
+//  ForecastViewModel.swift
 //  MarsMission
 //
 //  Created by Thanyani on 2020/11/04.
@@ -32,7 +32,6 @@ class ForecastViewModel {
 			self.forecastRepository.fetchForecast { (result) in
 				switch result {
 					case .success(let weatherData):
-						print(weatherData)
 						self.handleThatFecthForecastDataSucceeds(weatherData)
 					case .failure(let error):
 						self.handleThatFecthForecastDataFail(error)
