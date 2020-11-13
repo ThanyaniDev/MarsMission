@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F748F8522551B9C1007ACC3B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8512551B9C1007ACC3B /* Extension.swift */; };
+		F748F8522551B9C1007ACC3B /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8512551B9C1007ACC3B /* String+extension.swift */; };
 		F748F8652552187C007ACC3B /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8642552187C007ACC3B /* ForecastModel.swift */; };
 		F748F8E92552D48F007ACC3B /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8E82552D48F007ACC3B /* ForecastRepository.swift */; };
 		F748F8EE2552D4B8007ACC3B /* ForecastRepositoryImplemantation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8ED2552D4B8007ACC3B /* ForecastRepositoryImplemantation.swift */; };
@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F748F8512551B9C1007ACC3B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F748F8512551B9C1007ACC3B /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		F748F8642552187C007ACC3B /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		F748F8E82552D48F007ACC3B /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
 		F748F8ED2552D4B8007ACC3B /* ForecastRepositoryImplemantation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImplemantation.swift; sourceTree = "<group>"; };
@@ -98,13 +98,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F748F8502551B9A0007ACC3B /* Helper */ = {
+		F748F8502551B9A0007ACC3B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F748F8512551B9C1007ACC3B /* Extension.swift */,
+				F748F8512551B9C1007ACC3B /* String+extension.swift */,
 				F763555A255625EA000DD18D /* UTCToDate.swift */,
 			);
-			path = Helper;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F748F8CE2552B2FB007ACC3B /* Service */ = {
@@ -190,7 +190,7 @@
 				F7750F9E25501A67003080F8 /* Info.plist */,
 				F748F8E72552D444007ACC3B /* Repository */,
 				F748F8CE2552B2FB007ACC3B /* Service */,
-				F748F8502551B9A0007ACC3B /* Helper */,
+				F748F8502551B9A0007ACC3B /* Utilities */,
 				F75C57C92550239900F246C4 /* ViewModels */,
 				F75C57C82550236300F246C4 /* Controllers */,
 				F75C57C72550233900F246C4 /* Views */,
@@ -356,7 +356,7 @@
 				F763555B255625EA000DD18D /* UTCToDate.swift in Sources */,
 				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
 				F762C62D255985AC00024579 /* ForecastViewCell.swift in Sources */,
-				F748F8522551B9C1007ACC3B /* Extension.swift in Sources */,
+				F748F8522551B9C1007ACC3B /* String+extension.swift in Sources */,
 				F748F8F62552DBC4007ACC3B /* ForecastViewModel.swift in Sources */,
 				F762C64C255A8A1C00024579 /* ForecastDetailViewController.swift in Sources */,
 				F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */,

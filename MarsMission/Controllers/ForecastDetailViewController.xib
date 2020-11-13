@@ -68,14 +68,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="33" id="FvK-em-hBd"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="KEc-ld-v09"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="tCM-uY-TRf" secondAttribute="centerX" id="LtX-zl-58v"/>
+                <constraint firstItem="2fb-zW-xGA" firstAttribute="top" secondItem="0cn-hJ-keG" secondAttribute="bottom" constant="19" id="G7E-Qc-XWI"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="2fb-zW-xGA" secondAttribute="centerX" id="IM4-6d-BUp"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="tCM-uY-TRf" secondAttribute="centerX" id="KdF-6C-KmM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tCM-uY-TRf" secondAttribute="bottom" constant="260" id="ObB-Yq-B7g"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="tCM-uY-TRf" secondAttribute="leading" id="UQd-n2-WQ9"/>
-                <constraint firstItem="2fb-zW-xGA" firstAttribute="top" secondItem="0cn-hJ-keG" secondAttribute="bottom" constant="19" id="dyF-qR-mRc"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="33" id="ZDw-R3-HxZ"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="dDt-go-wxW"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="tCM-uY-TRf" secondAttribute="leading" id="jMX-De-LEX"/>
                 <constraint firstItem="tCM-uY-TRf" firstAttribute="top" secondItem="2fb-zW-xGA" secondAttribute="bottom" constant="33" id="sKO-vp-tTT"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="2fb-zW-xGA" secondAttribute="centerX" id="uD8-m7-nBZ"/>
             </constraints>
             <point key="canvasLocation" x="292.75362318840581" y="-96.428571428571431"/>
         </view>

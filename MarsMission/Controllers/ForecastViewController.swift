@@ -18,7 +18,7 @@ class ForecastViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.title = .forecastCollectionViewControllerTitle
+		navigationItem.title = .forecastNavTitle
 		forecastCollectionView.delegate = self
 		forecastCollectionView.dataSource = self
 		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: .reuseIdentifier)
@@ -37,13 +37,14 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 		guard let forecast =  forecastViewModel.forecast?.forecasts[indexPath.row] else {
 			return cell
 		}
+		//print(forecast.date)
 		cell.forecastDateLabel.text = ConvertUTCDateToLocalDate(date: forecast.date ?? "")
 		return cell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let forecastDetail = forecastViewModel.forecast?.forecasts[indexPath.row]
-		let forecastdetailsViewController = ForecastDetailViewController(nibName: .forecastDetailViewController, bundle: nil)
+		let forecastdetailsViewController = ForecastDetailViewController(nibName: .forecastDetailViewControllerNibName, bundle: nil)
 		forecastdetailsViewController.title = ConvertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
 		forecastdetailsViewController.humidity = forecastDetail?.humidity ?? 0
 		forecastdetailsViewController.temp = forecastDetail?.temp ?? 0
@@ -58,15 +59,11 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		return  UIEdgeInsets(top: 60, left: 10, bottom: 10, right: 10)
+		return  UIEdgeInsets(top: 50, left: 10, bottom: 10, right: 10)
 	}
 }
 
 extension ForecastViewController: ForecastView {
-	func forecastTitle(_ title: String) {
-		self.forecastTitle.text = forecastViewModel.forecastTitle
-	}
-	
 	func reloadForecastCollectionView() {
 		self.forecastCollectionView.reloadData()
 	}
@@ -79,6 +76,10 @@ extension ForecastViewController: ForecastView {
 	func hideLoadingIndicator() {
 		self.forecastActivityIndicator.stopAnimating()
 		self.forecastActivityIndicator.isHidden = true
+	}
+	
+	func forecastTitle(_ title: String) {
+		self.forecastTitle.text = forecastViewModel.forecastTitle
 	}
 	
 	func forecastFooter(_ weatherStation: String, _ lastUpdated: String) {
