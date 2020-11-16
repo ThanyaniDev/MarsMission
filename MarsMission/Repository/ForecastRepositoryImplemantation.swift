@@ -8,8 +8,14 @@
 import Foundation
 
 class ForecastRepositoryImplemantation: ForecastRepository {
+	let forecastservice: ForecastServiceImplementation
+	
+	init(forecastservice: ForecastServiceImplementation) {
+		self.forecastservice = forecastservice
+	}
+	
 	func fetchForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
-		ForecastServiceImplementation.shared.fetchForecast { (result) in
+		forecastservice.fetchForecast { (result) in
 			switch result {
 				case .success(let weather):
 					completion(Result.success(weather))

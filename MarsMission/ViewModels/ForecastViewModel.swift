@@ -39,7 +39,7 @@ class ForecastViewModel {
 			}
 		}
 	}
-	
+
 	private func handleThatFecthForecastDataSucceeds(_ weatherData: Forecast) {
 		DispatchQueue.main.async { [weak self] in
 			self?.forecast = weatherData

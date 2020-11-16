@@ -37,7 +37,6 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 		guard let forecast =  forecastViewModel.forecast?.forecasts[indexPath.row] else {
 			return cell
 		}
-		//print(forecast.date)
 		cell.forecastDateLabel.text = ConvertUTCDateToLocalDate(date: forecast.date ?? "")
 		return cell
 	}
@@ -86,5 +85,4 @@ extension ForecastViewController: ForecastView {
 		self.forecastLastUpdated.text = ConvertUTCDateToLocalDate(date: forecastViewModel.forecast?.lastUpdated ?? "")
 		self.forecastWeatherStation.text = forecastViewModel.forecast?.weatherStation
 	}
-	
 }
