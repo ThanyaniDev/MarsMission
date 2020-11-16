@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		if let windowScene = scene as? UIWindowScene {
 			let window = UIWindow(windowScene: windowScene)
-			let vc = LandingViewController(nibName: keys.nibName.landingView, bundle: nil)
+			let vc = ForecastViewController(nibName: .forecastViewControllerNibName, bundle: nil)
 			let nav = UINavigationController(rootViewController: vc)
 			window.rootViewController = nav
 			self.window = window

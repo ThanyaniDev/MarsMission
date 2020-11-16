@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForecastDetailViewController" customModule="MarsMission" customModuleProvider="target">
+            <connections>
+                <outlet property="forecastDetailDateLabel" destination="2fb-zW-xGA" id="abJ-Vw-ZjF"/>
+                <outlet property="forecastDetailHumidity" destination="ObG-9y-ZE8" id="IJz-68-64K"/>
+                <outlet property="forecastDetailSafe" destination="dkq-uJ-pJW" id="jXd-xm-abH"/>
+                <outlet property="forecastDetailTempLabel" destination="0cn-hJ-keG" id="wpO-22-WXb"/>
+                <outlet property="forecastDetailViewController" destination="tCM-uY-TRf" id="ac1-3f-hoA"/>
+                <outlet property="forecastDetailWindSpeed" destination="3XW-hf-OEm" id="TmV-33-8hJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCM-uY-TRf">
+                    <rect key="frame" x="20" y="314" width="375" height="288"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ObG-9y-ZE8">
+                            <rect key="frame" x="8" y="102" width="358" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                            <color key="textColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3XW-hf-OEm">
+                            <rect key="frame" x="8" y="8" width="358" height="86"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                            <color key="textColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dkq-uJ-pJW">
+                            <rect key="frame" x="50" y="189" width="274" height="91"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                            <color key="textColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2fb-zW-xGA">
+                    <rect key="frame" x="34" y="199" width="347" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                    <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-hJ-keG">
+                    <rect key="frame" x="20" y="77" width="374" height="103"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
+                    <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="2fb-zW-xGA" firstAttribute="top" secondItem="0cn-hJ-keG" secondAttribute="bottom" constant="19" id="G7E-Qc-XWI"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="2fb-zW-xGA" secondAttribute="centerX" id="IM4-6d-BUp"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="tCM-uY-TRf" secondAttribute="centerX" id="KdF-6C-KmM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tCM-uY-TRf" secondAttribute="bottom" constant="260" id="ObB-Yq-B7g"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="33" id="ZDw-R3-HxZ"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="dDt-go-wxW"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="tCM-uY-TRf" secondAttribute="leading" id="jMX-De-LEX"/>
+                <constraint firstItem="tCM-uY-TRf" firstAttribute="top" secondItem="2fb-zW-xGA" secondAttribute="bottom" constant="33" id="sKO-vp-tTT"/>
+            </constraints>
+            <point key="canvasLocation" x="292.75362318840581" y="-96.428571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
