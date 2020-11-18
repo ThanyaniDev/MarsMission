@@ -13,4 +13,5 @@ protocol ForecastView {
 	func showLoadingIndicator()
 	func hideLoadingIndicator()
 	func forecastFooter(_ weatherStation: String, _ lastUpdated: String)
+	func forecastDataFailureAlert()
 }

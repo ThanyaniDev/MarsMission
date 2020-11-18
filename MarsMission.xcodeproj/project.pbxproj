@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72C29E925635DD5008343FD /* Forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = F72C29E825635DD5008343FD /* Forecast.json */; };
+		F72C29EE2563D4C9008343FD /* ForecastViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72C29ED2563D4C9008343FD /* ForecastViewModelTest.swift */; };
 		F748F8522551B9C1007ACC3B /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8512551B9C1007ACC3B /* String+extension.swift */; };
 		F748F8652552187C007ACC3B /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8642552187C007ACC3B /* ForecastModel.swift */; };
 		F748F8E92552D48F007ACC3B /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F748F8E82552D48F007ACC3B /* ForecastRepository.swift */; };
@@ -22,10 +24,11 @@
 		F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9025501A66003080F8 /* AppDelegate.swift */; };
 		F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9225501A66003080F8 /* SceneDelegate.swift */; };
 		F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9925501A67003080F8 /* Assets.xcassets */; };
-		F7750FA825501A67003080F8 /* MarsMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FA725501A67003080F8 /* MarsMissionTests.swift */; };
 		F7750FB325501A67003080F8 /* MarsMissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FB225501A67003080F8 /* MarsMissionUITests.swift */; };
 		F79C4F51255BA37300995BA0 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C4F4F255BA37300995BA0 /* ForecastViewController.swift */; };
 		F79C4F52255BA37300995BA0 /* ForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79C4F50255BA37300995BA0 /* ForecastViewController.xib */; };
+		F7B177A3256281090017062F /* ForecastRepositoryImplemantationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B177A2256281090017062F /* ForecastRepositoryImplemantationTest.swift */; };
+		F7B177A8256282A30017062F /* MockForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B177A7256282A30017062F /* MockForecastService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F72C29E825635DD5008343FD /* Forecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Forecast.json; sourceTree = "<group>"; };
+		F72C29ED2563D4C9008343FD /* ForecastViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModelTest.swift; sourceTree = "<group>"; };
 		F748F8512551B9C1007ACC3B /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		F748F8642552187C007ACC3B /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		F748F8E82552D48F007ACC3B /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
@@ -64,13 +69,14 @@
 		F7750F9925501A67003080F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7750F9E25501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7750FA325501A67003080F8 /* MarsMissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7750FA725501A67003080F8 /* MarsMissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionTests.swift; sourceTree = "<group>"; };
 		F7750FA925501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750FB225501A67003080F8 /* MarsMissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionUITests.swift; sourceTree = "<group>"; };
 		F7750FB425501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F79C4F4F255BA37300995BA0 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		F79C4F50255BA37300995BA0 /* ForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastViewController.xib; sourceTree = "<group>"; };
+		F7B177A2256281090017062F /* ForecastRepositoryImplemantationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImplemantationTest.swift; sourceTree = "<group>"; };
+		F7B177A7256282A30017062F /* MockForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForecastService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		F769514E256248AC00BDDB48 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F7B177A7256282A30017062F /* MockForecastService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F7750F8425501A66003080F8 = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +216,11 @@
 		F7750FA625501A67003080F8 /* MarsMissionTests */ = {
 			isa = PBXGroup;
 			children = (
-				F7750FA725501A67003080F8 /* MarsMissionTests.swift */,
+				F7B177B02562A1840017062F /* TestData */,
+				F769514E256248AC00BDDB48 /* Mocks */,
 				F7750FA925501A67003080F8 /* Info.plist */,
+				F7B177A2256281090017062F /* ForecastRepositoryImplemantationTest.swift */,
+				F72C29ED2563D4C9008343FD /* ForecastViewModelTest.swift */,
 			);
 			path = MarsMissionTests;
 			sourceTree = "<group>";
@@ -215,6 +232,14 @@
 				F7750FB425501A67003080F8 /* Info.plist */,
 			);
 			path = MarsMissionUITests;
+			sourceTree = "<group>";
+		};
+		F7B177B02562A1840017062F /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				F72C29E825635DD5008343FD /* Forecast.json */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72C29E925635DD5008343FD /* Forecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +394,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7750FA825501A67003080F8 /* MarsMissionTests.swift in Sources */,
+				F72C29EE2563D4C9008343FD /* ForecastViewModelTest.swift in Sources */,
+				F7B177A8256282A30017062F /* MockForecastService.swift in Sources */,
+				F7B177A3256281090017062F /* ForecastRepositoryImplemantationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

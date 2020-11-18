@@ -13,6 +13,6 @@ func ConvertUTCDateToLocalDate(date:String) -> String {
 	let convertedDate =  format.date(from: date)
 	format.timeZone =  TimeZone(abbreviation: "GMT+0:00")
 	format.dateFormat = "E, d MMM yyyy"
-	let dateString =  format.string(from: convertedDate ?? Date())
-	return dateString
+	let dateToString =  format.string(from: convertedDate ?? Date())
+	return dateToString
 }

@@ -31,7 +31,7 @@ class ForecastDetailViewController: UIViewController {
 		forecastDetailViewController.layer.cornerRadius = 25
 		self.forecastDetailDateLabel.text = date
 		self.forecastDetailHumidity.text = "Humidity: \(humidity)%"
-		self.forecastDetailTempLabel.text = "Temp: \(temp)°C"
+		self.forecastDetailTempLabel.text = "Temp: \(temp) °C"
 		self.forecastDetailSafe.text = "Weather Condition: \(safe == true ? "Safe" : "Not Safe")"
 		self.forecastDetailWindSpeed.text = "WindSpeed: \(windSpeed) Km/h"
 	}

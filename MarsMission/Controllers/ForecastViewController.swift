@@ -8,7 +8,9 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-	private lazy  var forecastViewModel =  ForecastViewModel(view: self)
+	let forecastRepository = ForecastRepositoryImplemantation(forecastService: ForecastServiceImplementation())
+	
+	private lazy  var forecastViewModel =  ForecastViewModel(view: self,forecastRepository: forecastRepository)
 	
 	@IBOutlet weak var forecastTitle: UILabel!
 	@IBOutlet weak var forecastCollectionView: UICollectionView!
@@ -85,4 +87,11 @@ extension ForecastViewController: ForecastView {
 		self.forecastLastUpdated.text = ConvertUTCDateToLocalDate(date: forecastViewModel.forecast?.lastUpdated ?? "")
 		self.forecastWeatherStation.text = forecastViewModel.forecast?.weatherStation
 	}
+	
+	func forecastDataFailureAlert() {
+		let alert = UIAlertController(title: "Connection Failed!", message: "Something went wrong.\nTry Agian!", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
+		self.present(alert, animated: true)
+	}
 }
+

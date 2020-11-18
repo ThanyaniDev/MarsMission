@@ -11,14 +11,14 @@ import UIKit
 class ForecastViewModel {
 	
 	let forecastTitle:String = .forecastTitle
-	
-	let forecastRepository = ForecastServiceImplementation()
+	let forecastRepository: ForecastRepository
 	
 	var forecast: Forecast?
 	var view: ForecastView
 	
-	init(view: ForecastView) {
+	init(view: ForecastView,forecastRepository: ForecastRepository) {
 		self.view = view
+		self.forecastRepository = forecastRepository
 	}
 	
 	func forecastUIConfigration() {
@@ -31,8 +31,8 @@ class ForecastViewModel {
 		DispatchQueue.global(qos: .background).async {
 			self.forecastRepository.fetchForecast { (result) in
 				switch result {
-					case .success(let weatherData):
-						self.handleThatFecthForecastDataSucceeds(weatherData)
+					case .success(let forecast):
+						self.handleThatFecthForecastDataSucceeds(forecast)
 					case .failure(let error):
 						self.handleThatFecthForecastDataFail(error)
 				}
@@ -40,9 +40,9 @@ class ForecastViewModel {
 		}
 	}
 
-	private func handleThatFecthForecastDataSucceeds(_ weatherData: Forecast) {
+	private func handleThatFecthForecastDataSucceeds(_ forecast: Forecast) {
 		DispatchQueue.main.async { [weak self] in
-			self?.forecast = weatherData
+			self?.forecast = forecast
 			self?.view.reloadForecastCollectionView()
 			self?.view.hideLoadingIndicator()
 			self?.view.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
@@ -51,7 +51,8 @@ class ForecastViewModel {
 	
 	private func handleThatFecthForecastDataFail(_ error: Error) {
 		DispatchQueue.main.async {
-			print(error)
+			self.view.hideLoadingIndicator()
+			self.view.forecastDataFailureAlert()
 		}
 	}
 }

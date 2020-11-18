@@ -8,8 +8,6 @@
 import Foundation
 
 class ForecastServiceImplementation: ForecastService {
-	static let shared = ForecastServiceImplementation()
-	
 	private let serviceError = NSError(domain: "", code: 1, userInfo: nil)
 	
 	func fetchForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
