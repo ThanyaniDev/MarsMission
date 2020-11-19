@@ -35,5 +35,26 @@ class ForecastRepositoryImplemantationTest: XCTestCase {
 		XCTAssertEqual(false,forecastResults?.forecasts[4].safe)
 		XCTAssertEqual("NASA Mars North Weather Station",forecastResults?.weatherStation)
 		XCTAssertEqual("2020-11-07T22:00:00.000+0000",forecastResults?.lastUpdated)
+		XCTAssertNotNil(forecastResults)
     }
+	
+	
+	func testForecastServiceFailure() throws {
+		mockForecastService.shouldReturnError = true
+
+		var forecastResults:Forecast?
+
+		systemUnderTest?.fetchForecast(completion: { result in
+			forecastResults = try? result.get()
+		})
+		
+		XCTAssertEqual(nil,forecastResults?.forecasts[0].date)
+		XCTAssertEqual(nil,forecastResults?.forecasts[1].temp)
+		XCTAssertEqual(nil,forecastResults?.forecasts[2].humidity)
+		XCTAssertEqual(nil,forecastResults?.forecasts[3].windSpeed)
+		XCTAssertEqual(nil,forecastResults?.forecasts[4].safe)
+		XCTAssertEqual(nil,forecastResults?.weatherStation)
+		XCTAssertEqual(nil,forecastResults?.lastUpdated)
+		XCTAssertNil(forecastResults)
+	}
 }

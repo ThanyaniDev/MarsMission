@@ -89,7 +89,7 @@ extension ForecastViewController: ForecastView {
 	}
 	
 	func forecastDataFailureAlert() {
-		let alert = UIAlertController(title: "Connection Failed!", message: "Something went wrong.\nTry Agian!", preferredStyle: .alert)
+		let alert = UIAlertController(title: "Unexpected error happened.", message: "An error occured.\n retry later", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
 		self.present(alert, animated: true)
 	}
