@@ -10,7 +10,7 @@ import UIKit
 
 class ForecastViewModel {
 	
-	let forecastTitle:String = .forecastTitle
+	let forecastTitle: String = .forecastTitle
 	let forecastRepository: ForecastRepository
 	
 	var forecast: Forecast?
@@ -21,7 +21,7 @@ class ForecastViewModel {
 		self.forecastRepository = forecastRepository
 	}
 	
-	func forecastUIConfigration() {
+	func forecastUIConfiguration() {
 		self.view.forecastTitle(forecastTitle)
 		self.view.hideLoadingIndicator()
 	}
@@ -32,15 +32,15 @@ class ForecastViewModel {
 			self.forecastRepository.fetchForecast { (result) in
 				switch result {
 					case .success(let forecast):
-						self.handleThatFecthForecastDataSucceeds(forecast)
+						self.handleThatFetchForecastDataSucceeds(forecast)
 					case .failure(let error):
-						self.handleThatFecthForecastDataFail(error)
+						self.handleThatFetchForecastDataFail(error)
 				}
 			}
 		}
 	}
 
-	private func handleThatFecthForecastDataSucceeds(_ forecast: Forecast) {
+	private func handleThatFetchForecastDataSucceeds(_ forecast: Forecast) {
 		DispatchQueue.main.async { [weak self] in
 			self?.forecast = forecast
 			self?.view.reloadForecastCollectionView()
@@ -49,7 +49,7 @@ class ForecastViewModel {
 		}
 	}
 	
-	private func handleThatFecthForecastDataFail(_ error: Error) {
+	private func handleThatFetchForecastDataFail(_ error: Error) {
 		DispatchQueue.main.async {
 			self.view.hideLoadingIndicator()
 			self.view.forecastDataFailureAlert()

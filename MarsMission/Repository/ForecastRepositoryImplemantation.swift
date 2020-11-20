@@ -1,5 +1,5 @@
 //
-//  ForecastRepositoryImplemantation.swift
+//  ForecastRepositoryImplementation.swift
 //  MarsMission
 //
 //  Created by Thanyani on 2020/11/04.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ForecastRepositoryImplemantation: ForecastRepository {
+class ForecastRepositoryImplementation: ForecastRepository {
 	let forecastService: ForecastService
 	
 	init(forecastService: ForecastService) {

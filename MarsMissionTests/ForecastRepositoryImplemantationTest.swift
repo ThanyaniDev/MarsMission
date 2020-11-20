@@ -1,5 +1,5 @@
 //
-//  ForecastRepositoryImplemantationTest.swift
+//  ForecastRepositoryImplementationTest.swift
 //  MarsMissionTests
 //
 //  Created by Thanyani on 2020/11/16.
@@ -8,13 +8,13 @@
 import XCTest
 @testable import MarsMission
 
-class ForecastRepositoryImplemantationTest: XCTestCase {
+class ForecastRepositoryImplementationTest: XCTestCase {
 	
 	var mockForecastService = MockForecastService()
-	var systemUnderTest: ForecastRepositoryImplemantation?
+	var systemUnderTest: ForecastRepositoryImplementation?
 	
     override func setUpWithError() throws {
-		systemUnderTest = ForecastRepositoryImplemantation(forecastService: mockForecastService)
+		systemUnderTest = ForecastRepositoryImplementation(forecastService: mockForecastService)
     }
 
     override func tearDownWithError() throws {
