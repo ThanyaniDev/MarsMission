@@ -9,27 +9,26 @@ import Foundation
 import UIKit
 
 class ForecastViewModel {
-	
+
 	let forecastTitle: String = .forecastTitle
-	let forecastRepository: ForecastRepository
 	
 	var forecast: Forecast?
-	var view: ForecastView
+	var forecastView: ForecastView
+	var forecastRepository: ForecastRepository? = ForecastRepositoryImplementation(forecastService: ForecastServiceImplementation())
 	
-	init(view: ForecastView,forecastRepository: ForecastRepository) {
-		self.view = view
-		self.forecastRepository = forecastRepository
+	init(view: ForecastView) {
+		self.forecastView = view
 	}
 	
 	func forecastUIConfiguration() {
-		self.view.forecastTitle(forecastTitle)
-		self.view.hideLoadingIndicator()
+		self.forecastView.hideLoadingIndicator()
+		self.forecastView.forecastTitle(forecastTitle)
 	}
 	
 	func fetchForecast() {
-		self.view.showLoadingIndicator()
+		self.forecastView.showLoadingIndicator()
 		DispatchQueue.global(qos: .background).async {
-			self.forecastRepository.fetchForecast { (result) in
+			self.forecastRepository?.fetchForecast { (result) in
 				switch result {
 					case .success(let forecast):
 						self.handleThatFetchForecastDataSucceeds(forecast)
@@ -39,20 +38,20 @@ class ForecastViewModel {
 			}
 		}
 	}
-
+	
 	private func handleThatFetchForecastDataSucceeds(_ forecast: Forecast) {
 		DispatchQueue.main.async { [weak self] in
 			self?.forecast = forecast
-			self?.view.reloadForecastCollectionView()
-			self?.view.hideLoadingIndicator()
-			self?.view.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
+			self?.forecastView.hideLoadingIndicator()
+			self?.forecastView.reloadForecastCollectionView()
+			self?.forecastView.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
 		}
 	}
 	
 	private func handleThatFetchForecastDataFail(_ error: Error) {
 		DispatchQueue.main.async {
-			self.view.hideLoadingIndicator()
-			self.view.forecastDataFailureAlert()
+			self.forecastView.hideLoadingIndicator()
+			self.forecastView.forecastDataFailureAlert()
 		}
 	}
 }

@@ -9,7 +9,7 @@ import Foundation
 
 class ForecastRepositoryImplementation: ForecastRepository {
 	let forecastService: ForecastService
-	
+
 	init(forecastService: ForecastService) {
 		self.forecastService = forecastService
 	}

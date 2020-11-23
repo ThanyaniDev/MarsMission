@@ -8,24 +8,22 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-	let forecastRepository = ForecastRepositoryImplementation(forecastService: ForecastServiceImplementation())
-	
-	private lazy  var forecastViewModel =  ForecastViewModel(view: self,forecastRepository: forecastRepository)
+	private lazy  var forecastViewModel =  ForecastViewModel(view: self)
 	
 	@IBOutlet weak var forecastTitle: UILabel!
-	@IBOutlet weak var forecastCollectionView: UICollectionView!
-	@IBOutlet weak var forecastActivityIndicator: UIActivityIndicatorView!
 	@IBOutlet weak var forecastLastUpdated: UILabel!
 	@IBOutlet weak var forecastWeatherStation: UILabel!
+	@IBOutlet weak var forecastCollectionView: UICollectionView!
+	@IBOutlet weak var forecastActivityIndicator: UIActivityIndicatorView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.title = .forecastNavTitle
+		forecastViewModel.fetchForecast()
 		forecastCollectionView.delegate = self
 		forecastCollectionView.dataSource = self
-		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: .reuseIdentifier)
+		navigationItem.title = .forecastNavTitle
 		forecastViewModel.forecastUIConfiguration()
-		forecastViewModel.fetchForecast()
+		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: .reuseIdentifier)
 	}
 }
 
@@ -46,15 +44,14 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let forecastDetail = forecastViewModel.forecast?.forecasts[indexPath.row]
 		let forecastDetailsViewController = ForecastDetailViewController(nibName: .forecastDetailViewControllerNibName, bundle: nil)
-		forecastDetailsViewController.title = ConvertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
-		forecastDetailsViewController.humidity = forecastDetail?.humidity ?? 0
 		forecastDetailsViewController.temp = forecastDetail?.temp ?? 0
 		forecastDetailsViewController.safe = forecastDetail?.safe ?? false
+		forecastDetailsViewController.humidity = forecastDetail?.humidity ?? 0
 		forecastDetailsViewController.windSpeed = forecastDetail?.windSpeed ?? 0
 		forecastDetailsViewController.date = ConvertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
 		self.navigationController?.pushViewController(forecastDetailsViewController, animated: true)
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.bounds.size.width - 225, height: 120)
 	}

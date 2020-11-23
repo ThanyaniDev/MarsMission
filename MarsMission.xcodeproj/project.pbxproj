@@ -27,6 +27,8 @@
 		F7750F9325501A66003080F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750F9225501A66003080F8 /* SceneDelegate.swift */; };
 		F7750F9A25501A67003080F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7750F9925501A67003080F8 /* Assets.xcassets */; };
 		F7750FB325501A67003080F8 /* MarsMissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7750FB225501A67003080F8 /* MarsMissionUITests.swift */; };
+		F792E6B3256B333000958C19 /* ForecastDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792E6B2256B333000958C19 /* ForecastDetailViewModel.swift */; };
+		F792E6B8256B338200958C19 /* ForecastDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792E6B7256B338200958C19 /* ForecastDetailView.swift */; };
 		F79C4F51255BA37300995BA0 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C4F4F255BA37300995BA0 /* ForecastViewController.swift */; };
 		F79C4F52255BA37300995BA0 /* ForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79C4F50255BA37300995BA0 /* ForecastViewController.xib */; };
 		F7B177A3256281090017062F /* ForecastRepositoryImplemantationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B177A2256281090017062F /* ForecastRepositoryImplemantationTest.swift */; };
@@ -82,6 +84,8 @@
 		F7750FAE25501A67003080F8 /* MarsMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7750FB225501A67003080F8 /* MarsMissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsMissionUITests.swift; sourceTree = "<group>"; };
 		F7750FB425501A67003080F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F792E6B2256B333000958C19 /* ForecastDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailViewModel.swift; sourceTree = "<group>"; };
+		F792E6B7256B338200958C19 /* ForecastDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailView.swift; sourceTree = "<group>"; };
 		F79C4F4F255BA37300995BA0 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		F79C4F50255BA37300995BA0 /* ForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastViewController.xib; sourceTree = "<group>"; };
 		F7B177A2256281090017062F /* ForecastRepositoryImplemantationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImplemantationTest.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			children = (
 				F762C659255A983300024579 /* ForecastView.swift */,
 				F762C62B255985AC00024579 /* ForecastViewCell.swift */,
+				F792E6B7256B338200958C19 /* ForecastDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				F748F8F52552DBC4007ACC3B /* ForecastViewModel.swift */,
+				F792E6B2256B333000958C19 /* ForecastDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -524,7 +530,9 @@
 				F748F8EE2552D4B8007ACC3B /* ForecastRepositoryImplemantation.swift in Sources */,
 				F748F8E92552D48F007ACC3B /* ForecastRepository.swift in Sources */,
 				F762C65A255A983300024579 /* ForecastView.swift in Sources */,
+				F792E6B3256B333000958C19 /* ForecastDetailViewModel.swift in Sources */,
 				F763555B255625EA000DD18D /* UTCToDate.swift in Sources */,
+				F792E6B8256B338200958C19 /* ForecastDetailView.swift in Sources */,
 				F7750F9125501A66003080F8 /* AppDelegate.swift in Sources */,
 				F762C62D255985AC00024579 /* ForecastViewCell.swift in Sources */,
 				F748F8522551B9C1007ACC3B /* String+extension.swift in Sources */,
