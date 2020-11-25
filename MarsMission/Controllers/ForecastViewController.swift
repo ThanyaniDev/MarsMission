@@ -37,7 +37,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 		guard let forecast =  forecastViewModel.forecast?.forecasts[indexPath.row] else {
 			return cell
 		}
-		cell.forecastDateLabel.text = ConvertUTCDateToLocalDate(date: forecast.date ?? "")
+		cell.forecastDateLabel.text = convertUTCDateToLocalDate(date: forecast.date ?? "")
 		return cell
 	}
 	
@@ -48,7 +48,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 		forecastDetailsViewController.safe = forecastDetail?.safe ?? false
 		forecastDetailsViewController.humidity = forecastDetail?.humidity ?? 0
 		forecastDetailsViewController.windSpeed = forecastDetail?.windSpeed ?? 0
-		forecastDetailsViewController.date = ConvertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
+		forecastDetailsViewController.date = convertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
 		self.navigationController?.pushViewController(forecastDetailsViewController, animated: true)
 	}
 
@@ -81,13 +81,15 @@ extension ForecastViewController: ForecastView {
 	}
 	
 	func forecastFooter(_ weatherStation: String, _ lastUpdated: String) {
-		self.forecastLastUpdated.text = ConvertUTCDateToLocalDate(date: forecastViewModel.forecast?.lastUpdated ?? "")
+		self.forecastLastUpdated.text = convertUTCDateToLocalDate(date: forecastViewModel.forecast?.lastUpdated ?? "")
 		self.forecastWeatherStation.text = forecastViewModel.forecast?.weatherStation
 	}
 	
 	func forecastDataFailureAlert() {
 		let alert = UIAlertController(title: "Unexpected error happened.", message: "An error occurred.retry later", preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
+		alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
+			self.forecastViewModel.fetchForecast()
+		}))
 		self.present(alert, animated: true)
 	}
 }

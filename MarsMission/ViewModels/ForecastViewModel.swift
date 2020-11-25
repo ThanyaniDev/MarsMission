@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 class ForecastViewModel {
-
+	private lazy var forecastRepository: ForecastRepository? = ForecastRepositoryImplementation(forecastService: ForecastServiceImplementation())
+	
 	let forecastTitle: String = .forecastTitle
 	
 	var forecast: Forecast?
 	var forecastView: ForecastView
-	var forecastRepository: ForecastRepository? = ForecastRepositoryImplementation(forecastService: ForecastServiceImplementation())
 	
 	init(view: ForecastView) {
 		self.forecastView = view

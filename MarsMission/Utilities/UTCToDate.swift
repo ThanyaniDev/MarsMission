@@ -7,7 +7,7 @@
 
 import Foundation
 
-func ConvertUTCDateToLocalDate(date:String) -> String {
+func convertUTCDateToLocalDate(date:String) -> String {
 	let format = DateFormatter()
 	format.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 	let convertedDate = format.date(from: date)

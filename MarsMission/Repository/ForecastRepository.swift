@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ForecastRepository {
-	func fetchForecast(completion:  @escaping (Result<Forecast, Error>) -> Void )
+	func fetchForecast(completion: @escaping (Result<Forecast, Error>) -> Void)
 }

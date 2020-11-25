@@ -12,7 +12,8 @@
 			"temp": 40,
 			"humidity": 10,
 			"windSpeed": 300,
-			"safe": true
+			"safe": true,
+			"star": true
 		},
 		{
 			"date": "2020-11-07T22:00:00.000+0000",
