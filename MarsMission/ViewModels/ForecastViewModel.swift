@@ -9,26 +9,24 @@ import Foundation
 import UIKit
 
 class ForecastViewModel {
-	private lazy var forecastRepository: ForecastRepository? = ForecastRepositoryImplementation(forecastService: ForecastServiceImplementation())
-	
-	let forecastTitle: String = .forecastTitle
+	private let forecastRepository: ForecastRepository
 	
 	var forecast: Forecast?
 	var forecastView: ForecastView
 	
-	init(view: ForecastView) {
+	init(view: ForecastView, forecastRepository: ForecastRepository) {
 		self.forecastView = view
+		self.forecastRepository = forecastRepository
 	}
 	
 	func forecastUIConfiguration() {
 		self.forecastView.hideLoadingIndicator()
-		self.forecastView.forecastTitle(forecastTitle)
 	}
 	
 	func fetchForecast() {
 		self.forecastView.showLoadingIndicator()
 		DispatchQueue.global(qos: .background).async {
-			self.forecastRepository?.fetchForecast { (result) in
+			self.forecastRepository.fetchForecast { (result) in
 				switch result {
 					case .success(let forecast):
 						self.handleThatFetchForecastDataSucceeds(forecast)
@@ -43,6 +41,7 @@ class ForecastViewModel {
 		DispatchQueue.main.async { [weak self] in
 			self?.forecast = forecast
 			self?.forecastView.hideLoadingIndicator()
+			self?.forecastView.forecastTitle(.forecastTitle)
 			self?.forecastView.reloadForecastCollectionView()
 			self?.forecastView.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
 		}

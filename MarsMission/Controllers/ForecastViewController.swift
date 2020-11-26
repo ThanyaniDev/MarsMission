@@ -8,7 +8,8 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-	private lazy  var forecastViewModel =  ForecastViewModel(view: self)
+	private var forecastViewModel: ForecastViewModel?
+	let forecastService = ForecastServiceImplementation()
 	
 	@IBOutlet weak var forecastTitle: UILabel!
 	@IBOutlet weak var forecastLastUpdated: UILabel!
@@ -18,23 +19,25 @@ class ForecastViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		forecastViewModel.fetchForecast()
+		forecastViewModel?.forecastUIConfiguration()
+		let forecastRepository = ForecastRepositoryImplementation(forecastService: forecastService)
+		forecastViewModel = ForecastViewModel(view: self, forecastRepository: forecastRepository)
+		forecastViewModel?.fetchForecast()
 		forecastCollectionView.delegate = self
 		forecastCollectionView.dataSource = self
 		navigationItem.title = .forecastNavTitle
-		forecastViewModel.forecastUIConfiguration()
 		forecastCollectionView.register(ForecastViewCell.self, forCellWithReuseIdentifier: .reuseIdentifier)
 	}
 }
 
 extension ForecastViewController: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return forecastViewModel.forecast?.forecasts.count ?? 0
+		return forecastViewModel?.forecast?.forecasts.count ?? 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .reuseIdentifier, for: indexPath) as! ForecastViewCell
-		guard let forecast =  forecastViewModel.forecast?.forecasts[indexPath.row] else {
+		guard let forecast =  forecastViewModel?.forecast?.forecasts[indexPath.row] else {
 			return cell
 		}
 		cell.forecastDateLabel.text = convertUTCDateToLocalDate(date: forecast.date ?? "")
@@ -42,7 +45,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let forecastDetail = forecastViewModel.forecast?.forecasts[indexPath.row]
+		let forecastDetail = forecastViewModel?.forecast?.forecasts[indexPath.row]
 		let forecastDetailsViewController = ForecastDetailViewController(nibName: .forecastDetailViewControllerNibName, bundle: nil)
 		forecastDetailsViewController.temp = forecastDetail?.temp ?? 0
 		forecastDetailsViewController.safe = forecastDetail?.safe ?? false
@@ -51,7 +54,7 @@ extension ForecastViewController: UICollectionViewDelegate, UICollectionViewData
 		forecastDetailsViewController.date = convertUTCDateToLocalDate(date: forecastDetail?.date ?? "")
 		self.navigationController?.pushViewController(forecastDetailsViewController, animated: true)
 	}
-
+	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.bounds.size.width - 225, height: 120)
 	}
@@ -77,18 +80,18 @@ extension ForecastViewController: ForecastView {
 	}
 	
 	func forecastTitle(_ title: String) {
-		self.forecastTitle.text = forecastViewModel.forecastTitle
+		self.forecastTitle.text = .forecastTitle
 	}
 	
 	func forecastFooter(_ weatherStation: String, _ lastUpdated: String) {
-		self.forecastLastUpdated.text = convertUTCDateToLocalDate(date: forecastViewModel.forecast?.lastUpdated ?? "")
-		self.forecastWeatherStation.text = forecastViewModel.forecast?.weatherStation
+		self.forecastLastUpdated.text = convertUTCDateToLocalDate(date: forecastViewModel?.forecast?.lastUpdated ?? "")
+		self.forecastWeatherStation.text = forecastViewModel?.forecast?.weatherStation
 	}
 	
 	func forecastDataFailureAlert() {
 		let alert = UIAlertController(title: "Unexpected error happened.", message: "An error occurred.retry later", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
-			self.forecastViewModel.fetchForecast()
+			self.forecastViewModel?.fetchForecast()
 		}))
 		self.present(alert, animated: true)
 	}

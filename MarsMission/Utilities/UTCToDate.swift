@@ -15,3 +15,4 @@ func convertUTCDateToLocalDate(date:String) -> String {
 	format.dateFormat = "E, d MMM yyyy"
 	return format.string(from: convertedDate ?? Date())
 }
+

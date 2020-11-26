@@ -30,9 +30,6 @@ class ForecastDetailViewController: UIViewController {
 }
 
 extension ForecastDetailViewController: ForecastDetailView {
-	func setupForecastDetailViewData(_ safe: Bool, _ temp: Double) {
-	}
-	
 	func forecastDetailViewUI() {
 		forecastDetailViewController.layer.cornerRadius = 25
 		navigationItem.title = date
