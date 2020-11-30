@@ -8,13 +8,7 @@
 import UIKit
 
 class ForecastDetailViewController: UIViewController {
-	
-	@IBOutlet weak var forecastDetailViewController: UIView!
-	@IBOutlet weak var forecastDetailSafe: UILabel!
-	@IBOutlet weak var forecastDetailWindSpeed: UILabel!
-	@IBOutlet weak var forecastDetailHumidity: UILabel!
-	@IBOutlet weak var forecastDetailDateLabel: UILabel!
-	@IBOutlet weak var forecastDetailTempLabel: UILabel!
+	private lazy var forecastDetailViewModel =  ForecastDetailViewModel(forecastDetailView: self)
 	
 	var safe = Bool()
 	var windSpeed = Int()
@@ -22,16 +16,29 @@ class ForecastDetailViewController: UIViewController {
 	var date = String()
 	var humidity = Int()
 	
+	@IBOutlet weak var forecastDetailSafe: UILabel!
+	@IBOutlet weak var forecastDetailHumidity: UILabel!
+	@IBOutlet weak var forecastDetailWindSpeed: UILabel!
+	@IBOutlet weak var forecastDetailDateLabel: UILabel!
+	@IBOutlet weak var forecastDetailTempLabel: UILabel!
+	@IBOutlet weak var forecastDetailViewController: UIView!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setupForecastDetailView()
+		self.forecastDetailViewModel.forecastDetailUIConfiguration()
+	}
+}
+
+extension ForecastDetailViewController: ForecastDetailView {
+	func forecastDetailViewUI() {
+		forecastDetailViewController.layer.cornerRadius = 25
+		navigationItem.title = date
 	}
 	
 	func setupForecastDetailView() {
-		forecastDetailViewController.layer.cornerRadius = 25
 		self.forecastDetailDateLabel.text = date
-		self.forecastDetailHumidity.text = "Humidity: \(humidity)%"
-		self.forecastDetailTempLabel.text = "Temp: \(temp)°C"
+		self.forecastDetailTempLabel.text = "Temp: \(temp) °C"
+		self.forecastDetailHumidity.text = "Humidity: \(humidity) %"
 		self.forecastDetailSafe.text = "Weather Condition: \(safe == true ? "Safe" : "Not Safe")"
 		self.forecastDetailWindSpeed.text = "WindSpeed: \(windSpeed) Km/h"
 	}

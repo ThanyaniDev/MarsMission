@@ -9,49 +9,48 @@ import Foundation
 import UIKit
 
 class ForecastViewModel {
-	
-	let forecastTitle:String = .forecastTitle
-	
-	let forecastRepository = ForecastServiceImplementation()
+	private let forecastRepository: ForecastRepository
 	
 	var forecast: Forecast?
-	var view: ForecastView
+	var forecastView: ForecastView
 	
-	init(view: ForecastView) {
-		self.view = view
+	init(view: ForecastView, forecastRepository: ForecastRepository) {
+		self.forecastView = view
+		self.forecastRepository = forecastRepository
 	}
 	
-	func forecastUIConfigration() {
-		self.view.forecastTitle(forecastTitle)
-		self.view.hideLoadingIndicator()
+	func forecastUIConfiguration() {
+		self.forecastView.hideLoadingIndicator()
 	}
 	
 	func fetchForecast() {
-		self.view.showLoadingIndicator()
+		self.forecastView.showLoadingIndicator()
 		DispatchQueue.global(qos: .background).async {
 			self.forecastRepository.fetchForecast { (result) in
 				switch result {
-					case .success(let weatherData):
-						self.handleThatFecthForecastDataSucceeds(weatherData)
+					case .success(let forecast):
+						self.handleThatFetchForecastDataSucceeds(forecast)
 					case .failure(let error):
-						self.handleThatFecthForecastDataFail(error)
+						self.handleThatFetchForecastDataFail(error)
 				}
 			}
 		}
 	}
-
-	private func handleThatFecthForecastDataSucceeds(_ weatherData: Forecast) {
+	
+	private func handleThatFetchForecastDataSucceeds(_ forecast: Forecast) {
 		DispatchQueue.main.async { [weak self] in
-			self?.forecast = weatherData
-			self?.view.reloadForecastCollectionView()
-			self?.view.hideLoadingIndicator()
-			self?.view.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
+			self?.forecast = forecast
+			self?.forecastView.hideLoadingIndicator()
+			self?.forecastView.forecastTitle(.forecastTitle)
+			self?.forecastView.reloadForecastCollectionView()
+			self?.forecastView.forecastFooter(self?.forecast?.weatherStation ?? "", self?.forecast?.lastUpdated ?? "")
 		}
 	}
 	
-	private func handleThatFecthForecastDataFail(_ error: Error) {
+	private func handleThatFetchForecastDataFail(_ error: Error) {
 		DispatchQueue.main.async {
-			print(error)
+			self.forecastView.hideLoadingIndicator()
+			self.forecastView.forecastDataFailureAlert()
 		}
 	}
 }

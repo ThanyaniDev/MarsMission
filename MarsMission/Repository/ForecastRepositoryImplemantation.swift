@@ -1,5 +1,5 @@
 //
-//  ForecastRepositoryImplemantation.swift
+//  ForecastRepositoryImplementation.swift
 //  MarsMission
 //
 //  Created by Thanyani on 2020/11/04.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-class ForecastRepositoryImplemantation: ForecastRepository {
-	let forecastservice: ForecastServiceImplementation
+class ForecastRepositoryImplementation: ForecastRepository {
+	let forecastService: ForecastService
 	
-	init(forecastservice: ForecastServiceImplementation) {
-		self.forecastservice = forecastservice
+	init(forecastService: ForecastService) {
+		self.forecastService = forecastService
 	}
 	
 	func fetchForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
-		forecastservice.fetchForecast { (result) in
+		forecastService.fetchForecast { result in
 			switch result {
-				case .success(let weather):
-					completion(Result.success(weather))
+				case .success(let forecast):
+					completion(Result.success(forecast))
 				case .failure(let error):
 					completion(Result.failure(error))
 			}

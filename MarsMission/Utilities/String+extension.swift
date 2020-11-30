@@ -16,4 +16,3 @@ extension String {
 	static let reuseIdentifier = "Cell"
 	static let forecastTitle = "Mars Weather Forecast"
 }
-

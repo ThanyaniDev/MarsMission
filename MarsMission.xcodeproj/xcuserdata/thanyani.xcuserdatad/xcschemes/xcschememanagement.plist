@@ -7,7 +7,25 @@
 		<key>MarsMission.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F7750F8C25501A66003080F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7750FA225501A67003080F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7750FAD25501A67003080F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

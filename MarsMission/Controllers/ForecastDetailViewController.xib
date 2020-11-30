@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,14 +68,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="2fb-zW-xGA" firstAttribute="top" secondItem="0cn-hJ-keG" secondAttribute="bottom" constant="19" id="G7E-Qc-XWI"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="2fb-zW-xGA" secondAttribute="centerX" id="IM4-6d-BUp"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="tCM-uY-TRf" secondAttribute="centerX" id="KdF-6C-KmM"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="tCM-uY-TRf" secondAttribute="leading" id="77v-0w-VcA"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="tCM-uY-TRf" secondAttribute="centerX" id="8AV-t1-6Kp"/>
+                <constraint firstItem="2fb-zW-xGA" firstAttribute="top" secondItem="0cn-hJ-keG" secondAttribute="bottom" constant="19" id="MDa-Bp-m5Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tCM-uY-TRf" secondAttribute="bottom" constant="260" id="ObB-Yq-B7g"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="33" id="ZDw-R3-HxZ"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="dDt-go-wxW"/>
-                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="tCM-uY-TRf" secondAttribute="leading" id="jMX-De-LEX"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="centerX" secondItem="2fb-zW-xGA" secondAttribute="centerX" id="lr3-uh-SQ7"/>
                 <constraint firstItem="tCM-uY-TRf" firstAttribute="top" secondItem="2fb-zW-xGA" secondAttribute="bottom" constant="33" id="sKO-vp-tTT"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="sei-aN-bwK"/>
+                <constraint firstItem="0cn-hJ-keG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="33" id="xq5-ee-WwE"/>
             </constraints>
             <point key="canvasLocation" x="292.75362318840581" y="-96.428571428571431"/>
         </view>
